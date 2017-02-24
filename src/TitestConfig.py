@@ -229,8 +229,8 @@ class TitestConfig:
         parser.add_argument('-bi', '--binary-identical', action='store_true', default=False,
             help="perform binary identical comparison, i.e. tolerance is 0.0")
         
-        parser.add_argument('-tests', '--tests',required=False, default=None,
-            help="which tests to perform")
+        parser.add_argument('-tests', '--tests',required=False, default="short",
+            help="which tests to perform. Default: short.")
         
         parser.add_argument('-v', '--verbose', action='store_true', help="turn on verbose logging")
         
@@ -257,7 +257,7 @@ class TitestConfig:
         s+="\t redo build: "+str(self.redo_build)+"\n"
         s+="\t redo_tests: "+str(self.redo_tests)+"\n"
         s+="\t cleanup: "+str(self.cleanup)+"\n"
-        s+="\t binary identical: "+str(self.binary_identical)+"\n"
+       
 
         s+="   Directories layout\n"
         s+="\t top directory there building and testing will take place: "+str(self.test_space_dir)+"\n"
@@ -288,4 +288,6 @@ class TitestConfig:
         s+="\t titan binary to use: "+str(self.titan_bin)+"\n"
         s+="\t which mpirun to use for mpi jobs: "+str(self.mpirun)+"\n"
         
+        s+="   tests parameters\n"
+        s+="\t tests: "+str(self.tests)+"\n"
         return s
