@@ -7,7 +7,7 @@ import re
 
 from TitestCommon import titest_check_dir,run_command,get_cpu_instructions_sets,titest_cmd_timing_format
 from collections import OrderedDict
-from compare_hdf5 import compare_vizout_hdf5
+from compare_visout_hdf5 import compare_vizout_hdf5
 from compare_maxpilehights import compare_maxpilehights
 
 class TitestSingleTest:
