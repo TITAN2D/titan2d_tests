@@ -1,0 +1,1522 @@
+Outline init: Nx=1024 Ny=1024 Nx*Ny=1048576
+bed friction angle for "all materials
+" is 27
+internal friction angle is 37, epsilon is 0.0130596 
+ method order = 1
+REFINE_LEVEL=6
+At the end of time step 0 the time is 0:00:0 (hrs:min:sec),
+            time step length is 0 [sec], volume is 284648 [m^3],
+            max height is 30 [m], max velocity is 0 [m/s],
+            ave velocity is 0 [m/s], v* = 0
+
+At the end of time step 1 the time is 0:00:0.0553595 (hrs:min:sec),
+            time step length is 0.0553595 [sec], volume is 284648 [m^3],
+            max height is 30 [m], max velocity is 4.86312 [m/s],
+            ave velocity is 0.518831 [m/s], v* = 0.0037336
+
+At the end of time step 2 the time is 0:00:0.0862396 (hrs:min:sec),
+            time step length is 0.0308801 [sec], volume is 284647 [m^3],
+            max height is 30.0301 [m], max velocity is 6.34051 [m/s],
+            ave velocity is 0.755351 [m/s], v* = 0.00543564
+
+At the end of time step 3 the time is 0:00:0.115256 (hrs:min:sec),
+            time step length is 0.0290163 [sec], volume is 284647 [m^3],
+            max height is 30.1811 [m], max velocity is 7.63642 [m/s],
+            ave velocity is 0.912898 [m/s], v* = 0.00656937
+
+At the end of time step 4 the time is 0:00:0.144962 (hrs:min:sec),
+            time step length is 0.0297061 [sec], volume is 284646 [m^3],
+            max height is 30.1373 [m], max velocity is 7.97232 [m/s],
+            ave velocity is 1.05458 [m/s], v* = 0.00758898
+
+At the end of time step 5 the time is 0:00:0.182278 (hrs:min:sec),
+            time step length is 0.0373163 [sec], volume is 284646 [m^3],
+            max height is 30.082 [m], max velocity is 8.35305 [m/s],
+            ave velocity is 1.36818 [m/s], v* = 0.00984563
+
+At the end of time step 6 the time is 0:00:0.212305 (hrs:min:sec),
+            time step length is 0.0300268 [sec], volume is 284646 [m^3],
+            max height is 30.1007 [m], max velocity is 9.86291 [m/s],
+            ave velocity is 1.58294 [m/s], v* = 0.0113911
+
+At the end of time step 7 the time is 0:00:0.242914 (hrs:min:sec),
+            time step length is 0.0306092 [sec], volume is 284646 [m^3],
+            max height is 30.1308 [m], max velocity is 9.33587 [m/s],
+            ave velocity is 1.73784 [m/s], v* = 0.0125058
+
+At the end of time step 8 the time is 0:00:0.28873 (hrs:min:sec),
+            time step length is 0.0458152 [sec], volume is 284646 [m^3],
+            max height is 30.1028 [m], max velocity is 11.251 [m/s],
+            ave velocity is 1.95709 [m/s], v* = 0.0140836
+
+At the end of time step 9 the time is 0:00:0.33252 (hrs:min:sec),
+            time step length is 0.0437905 [sec], volume is 284646 [m^3],
+            max height is 30.0332 [m], max velocity is 11.447 [m/s],
+            ave velocity is 2.18746 [m/s], v* = 0.0157414
+
+At the end of time step 10 the time is 0:00:0.368652 (hrs:min:sec),
+            time step length is 0.0361324 [sec], volume is 284646 [m^3],
+            max height is 29.995 [m], max velocity is 11.2635 [m/s],
+            ave velocity is 2.40866 [m/s], v* = 0.0173332
+
+At the end of time step 11 the time is 0:00:0.398453 (hrs:min:sec),
+            time step length is 0.0298009 [sec], volume is 284645 [m^3],
+            max height is 29.9936 [m], max velocity is 11.7563 [m/s],
+            ave velocity is 2.56039 [m/s], v* = 0.018425
+
+At the end of time step 12 the time is 0:00:0.43017 (hrs:min:sec),
+            time step length is 0.0317167 [sec], volume is 284646 [m^3],
+            max height is 29.9727 [m], max velocity is 12.2186 [m/s],
+            ave velocity is 2.7164 [m/s], v* = 0.0195477
+
+At the end of time step 13 the time is 0:00:0.459127 (hrs:min:sec),
+            time step length is 0.0289566 [sec], volume is 284646 [m^3],
+            max height is 29.9493 [m], max velocity is 12.5385 [m/s],
+            ave velocity is 2.8413 [m/s], v* = 0.0204465
+
+At the end of time step 14 the time is 0:00:0.487197 (hrs:min:sec),
+            time step length is 0.0280707 [sec], volume is 284646 [m^3],
+            max height is 29.955 [m], max velocity is 12.7019 [m/s],
+            ave velocity is 2.95926 [m/s], v* = 0.0212954
+
+At the end of time step 15 the time is 0:00:0.522793 (hrs:min:sec),
+            time step length is 0.0355959 [sec], volume is 284646 [m^3],
+            max height is 29.9651 [m], max velocity is 12.8917 [m/s],
+            ave velocity is 3.1826 [m/s], v* = 0.0229025
+
+At the end of time step 16 the time is 0:00:0.551725 (hrs:min:sec),
+            time step length is 0.0289318 [sec], volume is 284646 [m^3],
+            max height is 29.8379 [m], max velocity is 13.4734 [m/s],
+            ave velocity is 3.32578 [m/s], v* = 0.0239329
+
+At the end of time step 17 the time is 0:00:0.579539 (hrs:min:sec),
+            time step length is 0.0278144 [sec], volume is 284646 [m^3],
+            max height is 29.8657 [m], max velocity is 13.9658 [m/s],
+            ave velocity is 3.46766 [m/s], v* = 0.0249539
+
+At the end of time step 18 the time is 0:00:0.608502 (hrs:min:sec),
+            time step length is 0.0289627 [sec], volume is 284645 [m^3],
+            max height is 29.9194 [m], max velocity is 14.1986 [m/s],
+            ave velocity is 3.59812 [m/s], v* = 0.0258927
+
+At the end of time step 19 the time is 0:00:0.637079 (hrs:min:sec),
+            time step length is 0.0285773 [sec], volume is 284645 [m^3],
+            max height is 30.0277 [m], max velocity is 14.1552 [m/s],
+            ave velocity is 3.72393 [m/s], v* = 0.0267981
+
+At the end of time step 20 the time is 0:00:0.672115 (hrs:min:sec),
+            time step length is 0.0350352 [sec], volume is 284646 [m^3],
+            max height is 29.603 [m], max velocity is 14.5717 [m/s],
+            ave velocity is 3.92178 [m/s], v* = 0.0282218
+
+At the end of time step 21 the time is 0:00:0.700612 (hrs:min:sec),
+            time step length is 0.0284971 [sec], volume is 284646 [m^3],
+            max height is 29.5464 [m], max velocity is 15.0738 [m/s],
+            ave velocity is 4.06031 [m/s], v* = 0.0292187
+
+At the end of time step 22 the time is 0:00:0.727761 (hrs:min:sec),
+            time step length is 0.0271492 [sec], volume is 284645 [m^3],
+            max height is 29.5929 [m], max velocity is 14.9154 [m/s],
+            ave velocity is 4.18186 [m/s], v* = 0.0300934
+
+At the end of time step 23 the time is 0:00:0.756067 (hrs:min:sec),
+            time step length is 0.0283058 [sec], volume is 284645 [m^3],
+            max height is 29.5568 [m], max velocity is 15.6258 [m/s],
+            ave velocity is 4.29584 [m/s], v* = 0.0309136
+
+At the end of time step 24 the time is 0:00:0.784708 (hrs:min:sec),
+            time step length is 0.0286415 [sec], volume is 284645 [m^3],
+            max height is 29.3298 [m], max velocity is 16.1891 [m/s],
+            ave velocity is 4.42361 [m/s], v* = 0.0318331
+
+At the end of time step 25 the time is 0:00:0.819014 (hrs:min:sec),
+            time step length is 0.0343057 [sec], volume is 284645 [m^3],
+            max height is 29.3506 [m], max velocity is 15.4967 [m/s],
+            ave velocity is 4.59985 [m/s], v* = 0.0331013
+
+At the end of time step 26 the time is 0:00:0.846876 (hrs:min:sec),
+            time step length is 0.0278617 [sec], volume is 284645 [m^3],
+            max height is 29.293 [m], max velocity is 15.7711 [m/s],
+            ave velocity is 4.734 [m/s], v* = 0.0340667
+
+At the end of time step 27 the time is 0:00:0.874705 (hrs:min:sec),
+            time step length is 0.0278297 [sec], volume is 284645 [m^3],
+            max height is 29.2183 [m], max velocity is 16.0208 [m/s],
+            ave velocity is 4.85395 [m/s], v* = 0.0349299
+
+At the end of time step 28 the time is 0:00:0.901643 (hrs:min:sec),
+            time step length is 0.0269378 [sec], volume is 284645 [m^3],
+            max height is 29.0984 [m], max velocity is 16.0355 [m/s],
+            ave velocity is 4.95244 [m/s], v* = 0.0356386
+
+At the end of time step 29 the time is 0:00:0.928687 (hrs:min:sec),
+            time step length is 0.0270438 [sec], volume is 284645 [m^3],
+            max height is 29.0496 [m], max velocity is 16.1411 [m/s],
+            ave velocity is 5.05839 [m/s], v* = 0.0364011
+
+At the end of time step 30 the time is 0:00:0.962455 (hrs:min:sec),
+            time step length is 0.0337683 [sec], volume is 284645 [m^3],
+            max height is 29.0259 [m], max velocity is 16.3074 [m/s],
+            ave velocity is 5.21536 [m/s], v* = 0.0375306
+
+At the end of time step 31 the time is 0:00:0.991011 (hrs:min:sec),
+            time step length is 0.0285557 [sec], volume is 284645 [m^3],
+            max height is 28.9536 [m], max velocity is 16.9818 [m/s],
+            ave velocity is 5.33427 [m/s], v* = 0.0383863
+
+At the end of time step 32 the time is 0:00:1 (hrs:min:sec),
+            time step length is 0.00898897 [sec], volume is 284645 [m^3],
+            max height is 28.8731 [m], max velocity is 16.9537 [m/s],
+            ave velocity is 5.36361 [m/s], v* = 0.0385975
+
+At the end of time step 33 the time is 0:00:1.0281 (hrs:min:sec),
+            time step length is 0.0281042 [sec], volume is 284645 [m^3],
+            max height is 28.7385 [m], max velocity is 16.9903 [m/s],
+            ave velocity is 5.4641 [m/s], v* = 0.0393206
+
+At the end of time step 34 the time is 0:00:1.05592 (hrs:min:sec),
+            time step length is 0.0278127 [sec], volume is 284645 [m^3],
+            max height is 28.6902 [m], max velocity is 17.0504 [m/s],
+            ave velocity is 5.56166 [m/s], v* = 0.0400227
+
+At the end of time step 35 the time is 0:00:1.0892 (hrs:min:sec),
+            time step length is 0.0332808 [sec], volume is 284645 [m^3],
+            max height is 28.5716 [m], max velocity is 17.3428 [m/s],
+            ave velocity is 5.72565 [m/s], v* = 0.0412028
+
+At the end of time step 36 the time is 0:00:1.11772 (hrs:min:sec),
+            time step length is 0.0285258 [sec], volume is 284645 [m^3],
+            max height is 28.4604 [m], max velocity is 17.4804 [m/s],
+            ave velocity is 5.83618 [m/s], v* = 0.0419982
+
+At the end of time step 37 the time is 0:00:1.14754 (hrs:min:sec),
+            time step length is 0.0298119 [sec], volume is 284645 [m^3],
+            max height is 28.4032 [m], max velocity is 17.6176 [m/s],
+            ave velocity is 5.94931 [m/s], v* = 0.0428123
+
+At the end of time step 38 the time is 0:00:1.17773 (hrs:min:sec),
+            time step length is 0.0301934 [sec], volume is 284645 [m^3],
+            max height is 28.328 [m], max velocity is 17.7352 [m/s],
+            ave velocity is 6.0553 [m/s], v* = 0.043575
+
+At the end of time step 39 the time is 0:00:1.20633 (hrs:min:sec),
+            time step length is 0.0285973 [sec], volume is 284645 [m^3],
+            max height is 28.1991 [m], max velocity is 17.8522 [m/s],
+            ave velocity is 6.1585 [m/s], v* = 0.0443176
+
+At the end of time step 40 the time is 0:00:1.23927 (hrs:min:sec),
+            time step length is 0.0329443 [sec], volume is 284645 [m^3],
+            max height is 28.1312 [m], max velocity is 17.8145 [m/s],
+            ave velocity is 6.30351 [m/s], v* = 0.0453612
+
+At the end of time step 41 the time is 0:00:1.26706 (hrs:min:sec),
+            time step length is 0.0277854 [sec], volume is 284645 [m^3],
+            max height is 28.0191 [m], max velocity is 18.0462 [m/s],
+            ave velocity is 6.412 [m/s], v* = 0.0461419
+
+At the end of time step 42 the time is 0:00:1.29493 (hrs:min:sec),
+            time step length is 0.0278764 [sec], volume is 284645 [m^3],
+            max height is 27.9667 [m], max velocity is 18.3374 [m/s],
+            ave velocity is 6.51916 [m/s], v* = 0.0469131
+
+At the end of time step 43 the time is 0:00:1.32208 (hrs:min:sec),
+            time step length is 0.027143 [sec], volume is 284645 [m^3],
+            max height is 27.9033 [m], max velocity is 18.574 [m/s],
+            ave velocity is 6.61697 [m/s], v* = 0.0476169
+
+At the end of time step 44 the time is 0:00:1.3487 (hrs:min:sec),
+            time step length is 0.0266222 [sec], volume is 284645 [m^3],
+            max height is 27.8606 [m], max velocity is 18.6331 [m/s],
+            ave velocity is 6.71324 [m/s], v* = 0.0483097
+
+At the end of time step 45 the time is 0:00:1.38151 (hrs:min:sec),
+            time step length is 0.032808 [sec], volume is 284645 [m^3],
+            max height is 27.776 [m], max velocity is 19.1144 [m/s],
+            ave velocity is 6.84561 [m/s], v* = 0.0492622
+
+At the end of time step 46 the time is 0:00:1.40915 (hrs:min:sec),
+            time step length is 0.0276396 [sec], volume is 284644 [m^3],
+            max height is 27.658 [m], max velocity is 19.0812 [m/s],
+            ave velocity is 6.94357 [m/s], v* = 0.0499671
+
+At the end of time step 47 the time is 0:00:1.43717 (hrs:min:sec),
+            time step length is 0.0280287 [sec], volume is 284645 [m^3],
+            max height is 27.5519 [m], max velocity is 19.1809 [m/s],
+            ave velocity is 7.03738 [m/s], v* = 0.0506422
+
+At the end of time step 48 the time is 0:00:1.46545 (hrs:min:sec),
+            time step length is 0.0282772 [sec], volume is 284644 [m^3],
+            max height is 27.457 [m], max velocity is 19.2646 [m/s],
+            ave velocity is 7.13491 [m/s], v* = 0.0513441
+
+At the end of time step 49 the time is 0:00:1.49489 (hrs:min:sec),
+            time step length is 0.029443 [sec], volume is 284644 [m^3],
+            max height is 27.3473 [m], max velocity is 19.3366 [m/s],
+            ave velocity is 7.23792 [m/s], v* = 0.0520853
+
+At the end of time step 50 the time is 0:00:1.52787 (hrs:min:sec),
+            time step length is 0.0329726 [sec], volume is 284644 [m^3],
+            max height is 27.2313 [m], max velocity is 19.1814 [m/s],
+            ave velocity is 7.36993 [m/s], v* = 0.0530353
+
+At the end of time step 51 the time is 0:00:1.55612 (hrs:min:sec),
+            time step length is 0.0282543 [sec], volume is 284644 [m^3],
+            max height is 27.1005 [m], max velocity is 19.1955 [m/s],
+            ave velocity is 7.47195 [m/s], v* = 0.0537695
+
+At the end of time step 52 the time is 0:00:1.58375 (hrs:min:sec),
+            time step length is 0.0276276 [sec], volume is 284645 [m^3],
+            max height is 26.9983 [m], max velocity is 19.2864 [m/s],
+            ave velocity is 7.56605 [m/s], v* = 0.0544466
+
+At the end of time step 53 the time is 0:00:1.61076 (hrs:min:sec),
+            time step length is 0.0270096 [sec], volume is 284645 [m^3],
+            max height is 26.8841 [m], max velocity is 19.4115 [m/s],
+            ave velocity is 7.6587 [m/s], v* = 0.0551133
+
+At the end of time step 54 the time is 0:00:1.63759 (hrs:min:sec),
+            time step length is 0.0268327 [sec], volume is 284644 [m^3],
+            max height is 26.7678 [m], max velocity is 19.5672 [m/s],
+            ave velocity is 7.75445 [m/s], v* = 0.0558024
+
+At the end of time step 55 the time is 0:00:1.66972 (hrs:min:sec),
+            time step length is 0.032133 [sec], volume is 284644 [m^3],
+            max height is 26.6118 [m], max velocity is 19.7264 [m/s],
+            ave velocity is 7.87581 [m/s], v* = 0.0566757
+
+At the end of time step 56 the time is 0:00:1.69857 (hrs:min:sec),
+            time step length is 0.0288438 [sec], volume is 284644 [m^3],
+            max height is 26.5135 [m], max velocity is 19.8181 [m/s],
+            ave velocity is 7.97069 [m/s], v* = 0.0573585
+
+At the end of time step 57 the time is 0:00:1.7282 (hrs:min:sec),
+            time step length is 0.0296278 [sec], volume is 284644 [m^3],
+            max height is 26.4321 [m], max velocity is 19.8907 [m/s],
+            ave velocity is 8.0638 [m/s], v* = 0.0580285
+
+At the end of time step 58 the time is 0:00:1.75784 (hrs:min:sec),
+            time step length is 0.0296481 [sec], volume is 284644 [m^3],
+            max height is 26.2825 [m], max velocity is 20.1083 [m/s],
+            ave velocity is 8.15655 [m/s], v* = 0.058696
+
+At the end of time step 59 the time is 0:00:1.78747 (hrs:min:sec),
+            time step length is 0.0296269 [sec], volume is 284644 [m^3],
+            max height is 26.1596 [m], max velocity is 20.2611 [m/s],
+            ave velocity is 8.2503 [m/s], v* = 0.0593706
+
+At the end of time step 60 the time is 0:00:1.81969 (hrs:min:sec),
+            time step length is 0.032219 [sec], volume is 284644 [m^3],
+            max height is 26.0252 [m], max velocity is 20.3452 [m/s],
+            ave velocity is 8.36974 [m/s], v* = 0.0602301
+
+At the end of time step 61 the time is 0:00:1.84804 (hrs:min:sec),
+            time step length is 0.0283515 [sec], volume is 284644 [m^3],
+            max height is 25.9438 [m], max velocity is 20.6467 [m/s],
+            ave velocity is 8.4615 [m/s], v* = 0.0608904
+
+At the end of time step 62 the time is 0:00:1.87645 (hrs:min:sec),
+            time step length is 0.0284106 [sec], volume is 284644 [m^3],
+            max height is 25.8601 [m], max velocity is 20.7171 [m/s],
+            ave velocity is 8.55432 [m/s], v* = 0.0615584
+
+At the end of time step 63 the time is 0:00:1.90382 (hrs:min:sec),
+            time step length is 0.0273641 [sec], volume is 284644 [m^3],
+            max height is 25.7782 [m], max velocity is 20.7878 [m/s],
+            ave velocity is 8.63858 [m/s], v* = 0.0621647
+
+At the end of time step 64 the time is 0:00:1.93082 (hrs:min:sec),
+            time step length is 0.027009 [sec], volume is 284644 [m^3],
+            max height is 25.6952 [m], max velocity is 20.7521 [m/s],
+            ave velocity is 8.72402 [m/s], v* = 0.0627796
+
+At the end of time step 65 the time is 0:00:1.96249 (hrs:min:sec),
+            time step length is 0.0316691 [sec], volume is 284644 [m^3],
+            max height is 25.5817 [m], max velocity is 20.6422 [m/s],
+            ave velocity is 8.8406 [m/s], v* = 0.0636185
+
+At the end of time step 66 the time is 0:00:1.99071 (hrs:min:sec),
+            time step length is 0.0282208 [sec], volume is 284644 [m^3],
+            max height is 25.5478 [m], max velocity is 20.9103 [m/s],
+            ave velocity is 8.93024 [m/s], v* = 0.0642636
+
+At the end of time step 67 the time is 0:00:2 (hrs:min:sec),
+            time step length is 0.00928572 [sec], volume is 284644 [m^3],
+            max height is 25.4839 [m], max velocity is 20.9267 [m/s],
+            ave velocity is 8.95845 [m/s], v* = 0.0644666
+
+At the end of time step 68 the time is 0:00:2.0285 (hrs:min:sec),
+            time step length is 0.0284997 [sec], volume is 284644 [m^3],
+            max height is 25.3094 [m], max velocity is 21.1417 [m/s],
+            ave velocity is 9.04585 [m/s], v* = 0.0650956
+
+At the end of time step 69 the time is 0:00:2.05644 (hrs:min:sec),
+            time step length is 0.0279413 [sec], volume is 284644 [m^3],
+            max height is 25.1463 [m], max velocity is 21.2452 [m/s],
+            ave velocity is 9.13182 [m/s], v* = 0.0657142
+
+At the end of time step 70 the time is 0:00:2.0874 (hrs:min:sec),
+            time step length is 0.0309601 [sec], volume is 284644 [m^3],
+            max height is 25.0278 [m], max velocity is 21.495 [m/s],
+            ave velocity is 9.23712 [m/s], v* = 0.066472
+
+At the end of time step 71 the time is 0:00:2.11535 (hrs:min:sec),
+            time step length is 0.0279509 [sec], volume is 284644 [m^3],
+            max height is 24.8648 [m], max velocity is 21.5433 [m/s],
+            ave velocity is 9.3218 [m/s], v* = 0.0670813
+
+At the end of time step 72 the time is 0:00:2.14301 (hrs:min:sec),
+            time step length is 0.0276586 [sec], volume is 284644 [m^3],
+            max height is 24.8725 [m], max velocity is 21.7755 [m/s],
+            ave velocity is 9.40525 [m/s], v* = 0.0676818
+
+At the end of time step 73 the time is 0:00:2.16943 (hrs:min:sec),
+            time step length is 0.026421 [sec], volume is 284644 [m^3],
+            max height is 24.7971 [m], max velocity is 21.8377 [m/s],
+            ave velocity is 9.48546 [m/s], v* = 0.068259
+
+At the end of time step 74 the time is 0:00:2.1963 (hrs:min:sec),
+            time step length is 0.0268714 [sec], volume is 284644 [m^3],
+            max height is 24.7595 [m], max velocity is 21.9378 [m/s],
+            ave velocity is 9.56585 [m/s], v* = 0.0688375
+
+At the end of time step 75 the time is 0:00:2.22705 (hrs:min:sec),
+            time step length is 0.0307465 [sec], volume is 284644 [m^3],
+            max height is 24.3931 [m], max velocity is 21.775 [m/s],
+            ave velocity is 9.67402 [m/s], v* = 0.0696159
+
+At the end of time step 76 the time is 0:00:2.25483 (hrs:min:sec),
+            time step length is 0.0277758 [sec], volume is 284644 [m^3],
+            max height is 24.214 [m], max velocity is 21.9203 [m/s],
+            ave velocity is 9.76039 [m/s], v* = 0.0702375
+
+At the end of time step 77 the time is 0:00:2.28197 (hrs:min:sec),
+            time step length is 0.0271455 [sec], volume is 284644 [m^3],
+            max height is 24.1857 [m], max velocity is 22.0269 [m/s],
+            ave velocity is 9.84205 [m/s], v* = 0.0708251
+
+At the end of time step 78 the time is 0:00:2.30918 (hrs:min:sec),
+            time step length is 0.0272113 [sec], volume is 284644 [m^3],
+            max height is 24.0725 [m], max velocity is 22.1704 [m/s],
+            ave velocity is 9.9237 [m/s], v* = 0.0714127
+
+At the end of time step 79 the time is 0:00:2.33568 (hrs:min:sec),
+            time step length is 0.0264945 [sec], volume is 284644 [m^3],
+            max height is 23.9466 [m], max velocity is 22.2889 [m/s],
+            ave velocity is 10.0019 [m/s], v* = 0.0719756
+
+At the end of time step 80 the time is 0:00:2.3657 (hrs:min:sec),
+            time step length is 0.0300223 [sec], volume is 284643 [m^3],
+            max height is 23.7549 [m], max velocity is 22.3059 [m/s],
+            ave velocity is 10.0962 [m/s], v* = 0.0726539
+
+At the end of time step 81 the time is 0:00:2.39202 (hrs:min:sec),
+            time step length is 0.0263232 [sec], volume is 284643 [m^3],
+            max height is 23.487 [m], max velocity is 22.4684 [m/s],
+            ave velocity is 10.1729 [m/s], v* = 0.0732059
+
+At the end of time step 82 the time is 0:00:2.4179 (hrs:min:sec),
+            time step length is 0.0258828 [sec], volume is 284644 [m^3],
+            max height is 23.3422 [m], max velocity is 22.6274 [m/s],
+            ave velocity is 10.2491 [m/s], v* = 0.0737546
+
+At the end of time step 83 the time is 0:00:2.44357 (hrs:min:sec),
+            time step length is 0.025662 [sec], volume is 284644 [m^3],
+            max height is 23.241 [m], max velocity is 22.73 [m/s],
+            ave velocity is 10.3252 [m/s], v* = 0.0743019
+
+At the end of time step 84 the time is 0:00:2.47086 (hrs:min:sec),
+            time step length is 0.0272953 [sec], volume is 284644 [m^3],
+            max height is 23.1971 [m], max velocity is 22.9085 [m/s],
+            ave velocity is 10.4044 [m/s], v* = 0.074872
+
+At the end of time step 85 the time is 0:00:2.50098 (hrs:min:sec),
+            time step length is 0.0301175 [sec], volume is 284643 [m^3],
+            max height is 23.0472 [m], max velocity is 22.7098 [m/s],
+            ave velocity is 10.5034 [m/s], v* = 0.0755846
+
+At the end of time step 86 the time is 0:00:2.52793 (hrs:min:sec),
+            time step length is 0.0269509 [sec], volume is 284643 [m^3],
+            max height is 22.98 [m], max velocity is 22.7315 [m/s],
+            ave velocity is 10.5819 [m/s], v* = 0.0761492
+
+At the end of time step 87 the time is 0:00:2.55536 (hrs:min:sec),
+            time step length is 0.027433 [sec], volume is 284643 [m^3],
+            max height is 22.8876 [m], max velocity is 22.8211 [m/s],
+            ave velocity is 10.6602 [m/s], v* = 0.0767123
+
+At the end of time step 88 the time is 0:00:2.58211 (hrs:min:sec),
+            time step length is 0.0267488 [sec], volume is 284643 [m^3],
+            max height is 22.803 [m], max velocity is 22.8989 [m/s],
+            ave velocity is 10.7379 [m/s], v* = 0.0772717
+
+At the end of time step 89 the time is 0:00:2.6092 (hrs:min:sec),
+            time step length is 0.0270916 [sec], volume is 284643 [m^3],
+            max height is 22.7215 [m], max velocity is 23.0509 [m/s],
+            ave velocity is 10.8155 [m/s], v* = 0.0778302
+
+At the end of time step 90 the time is 0:00:2.63885 (hrs:min:sec),
+            time step length is 0.0296443 [sec], volume is 284642 [m^3],
+            max height is 22.6205 [m], max velocity is 23.2661 [m/s],
+            ave velocity is 10.9041 [m/s], v* = 0.0784681
+
+At the end of time step 91 the time is 0:00:2.66602 (hrs:min:sec),
+            time step length is 0.027172 [sec], volume is 284643 [m^3],
+            max height is 22.5171 [m], max velocity is 23.4025 [m/s],
+            ave velocity is 10.9811 [m/s], v* = 0.0790218
+
+At the end of time step 92 the time is 0:00:2.69273 (hrs:min:sec),
+            time step length is 0.026712 [sec], volume is 284643 [m^3],
+            max height is 22.557 [m], max velocity is 23.6004 [m/s],
+            ave velocity is 11.0555 [m/s], v* = 0.0795573
+
+At the end of time step 93 the time is 0:00:2.71862 (hrs:min:sec),
+            time step length is 0.0258916 [sec], volume is 284643 [m^3],
+            max height is 22.5334 [m], max velocity is 23.8138 [m/s],
+            ave velocity is 11.1282 [m/s], v* = 0.0800804
+
+At the end of time step 94 the time is 0:00:2.74438 (hrs:min:sec),
+            time step length is 0.0257555 [sec], volume is 284643 [m^3],
+            max height is 22.4061 [m], max velocity is 23.8239 [m/s],
+            ave velocity is 11.2005 [m/s], v* = 0.0806011
+
+At the end of time step 95 the time is 0:00:2.77344 (hrs:min:sec),
+            time step length is 0.0290588 [sec], volume is 284643 [m^3],
+            max height is 21.9228 [m], max velocity is 23.7163 [m/s],
+            ave velocity is 11.2908 [m/s], v* = 0.0812506
+
+At the end of time step 96 the time is 0:00:2.80026 (hrs:min:sec),
+            time step length is 0.0268204 [sec], volume is 284643 [m^3],
+            max height is 21.8232 [m], max velocity is 23.8674 [m/s],
+            ave velocity is 11.3657 [m/s], v* = 0.0817894
+
+At the end of time step 97 the time is 0:00:2.82674 (hrs:min:sec),
+            time step length is 0.0264768 [sec], volume is 284643 [m^3],
+            max height is 21.7316 [m], max velocity is 24.0287 [m/s],
+            ave velocity is 11.4391 [m/s], v* = 0.0823177
+
+At the end of time step 98 the time is 0:00:2.85269 (hrs:min:sec),
+            time step length is 0.0259521 [sec], volume is 284643 [m^3],
+            max height is 21.6475 [m], max velocity is 23.9558 [m/s],
+            ave velocity is 11.5099 [m/s], v* = 0.0828273
+
+At the end of time step 99 the time is 0:00:2.88034 (hrs:min:sec),
+            time step length is 0.0276504 [sec], volume is 284642 [m^3],
+            max height is 21.5628 [m], max velocity is 24.0545 [m/s],
+            ave velocity is 11.5863 [m/s], v* = 0.0833774
+
+At the end of time step 100 the time is 0:00:2.90972 (hrs:min:sec),
+            time step length is 0.029379 [sec], volume is 284642 [m^3],
+            max height is 21.4297 [m], max velocity is 24.2536 [m/s],
+            ave velocity is 11.6699 [m/s], v* = 0.0839786
+
+At the end of time step 101 the time is 0:00:2.93592 (hrs:min:sec),
+            time step length is 0.0262017 [sec], volume is 284643 [m^3],
+            max height is 21.2941 [m], max velocity is 24.4953 [m/s],
+            ave velocity is 11.7403 [m/s], v* = 0.0844855
+
+At the end of time step 102 the time is 0:00:2.96175 (hrs:min:sec),
+            time step length is 0.025836 [sec], volume is 284642 [m^3],
+            max height is 21.187 [m], max velocity is 24.5837 [m/s],
+            ave velocity is 11.8095 [m/s], v* = 0.084983
+
+At the end of time step 103 the time is 0:00:2.98757 (hrs:min:sec),
+            time step length is 0.0258144 [sec], volume is 284642 [m^3],
+            max height is 21.0917 [m], max velocity is 24.781 [m/s],
+            ave velocity is 11.8787 [m/s], v* = 0.0854812
+
+At the end of time step 104 the time is 0:00:3 (hrs:min:sec),
+            time step length is 0.012431 [sec], volume is 284642 [m^3],
+            max height is 21.0509 [m], max velocity is 24.7782 [m/s],
+            ave velocity is 11.9114 [m/s], v* = 0.0857167
+
+At the end of time step 105 the time is 0:00:3.02956 (hrs:min:sec),
+            time step length is 0.0295613 [sec], volume is 284642 [m^3],
+            max height is 20.84 [m], max velocity is 24.7301 [m/s],
+            ave velocity is 11.9974 [m/s], v* = 0.0863356
+
+At the end of time step 106 the time is 0:00:3.05578 (hrs:min:sec),
+            time step length is 0.0262225 [sec], volume is 284642 [m^3],
+            max height is 20.7951 [m], max velocity is 24.804 [m/s],
+            ave velocity is 12.0666 [m/s], v* = 0.086833
+
+At the end of time step 107 the time is 0:00:3.08249 (hrs:min:sec),
+            time step length is 0.0267112 [sec], volume is 284642 [m^3],
+            max height is 20.7547 [m], max velocity is 24.8795 [m/s],
+            ave velocity is 12.1368 [m/s], v* = 0.0873389
+
+At the end of time step 108 the time is 0:00:3.10915 (hrs:min:sec),
+            time step length is 0.0266561 [sec], volume is 284642 [m^3],
+            max height is 20.7151 [m], max velocity is 24.9546 [m/s],
+            ave velocity is 12.2069 [m/s], v* = 0.0878428
+
+At the end of time step 109 the time is 0:00:3.13619 (hrs:min:sec),
+            time step length is 0.0270375 [sec], volume is 284642 [m^3],
+            max height is 20.6756 [m], max velocity is 25.0306 [m/s],
+            ave velocity is 12.2779 [m/s], v* = 0.0883538
+
+At the end of time step 110 the time is 0:00:3.16499 (hrs:min:sec),
+            time step length is 0.0287994 [sec], volume is 284642 [m^3],
+            max height is 20.611 [m], max velocity is 25.1771 [m/s],
+            ave velocity is 12.3556 [m/s], v* = 0.0889127
+
+At the end of time step 111 the time is 0:00:3.19104 (hrs:min:sec),
+            time step length is 0.026054 [sec], volume is 284642 [m^3],
+            max height is 20.5559 [m], max velocity is 25.3246 [m/s],
+            ave velocity is 12.4232 [m/s], v* = 0.0893997
+
+At the end of time step 112 the time is 0:00:3.21726 (hrs:min:sec),
+            time step length is 0.0262211 [sec], volume is 284642 [m^3],
+            max height is 20.4747 [m], max velocity is 25.5356 [m/s],
+            ave velocity is 12.4921 [m/s], v* = 0.0898954
+
+At the end of time step 113 the time is 0:00:3.24306 (hrs:min:sec),
+            time step length is 0.0257944 [sec], volume is 284642 [m^3],
+            max height is 20.3051 [m], max velocity is 25.7392 [m/s],
+            ave velocity is 12.5591 [m/s], v* = 0.0903773
+
+At the end of time step 114 the time is 0:00:3.26887 (hrs:min:sec),
+            time step length is 0.0258088 [sec], volume is 284642 [m^3],
+            max height is 20.2969 [m], max velocity is 25.7786 [m/s],
+            ave velocity is 12.626 [m/s], v* = 0.0908589
+
+At the end of time step 115 the time is 0:00:3.29769 (hrs:min:sec),
+            time step length is 0.0288282 [sec], volume is 284641 [m^3],
+            max height is 19.9789 [m], max velocity is 25.7272 [m/s],
+            ave velocity is 12.7059 [m/s], v* = 0.0914336
+
+At the end of time step 116 the time is 0:00:3.32362 (hrs:min:sec),
+            time step length is 0.0259213 [sec], volume is 284642 [m^3],
+            max height is 19.881 [m], max velocity is 25.7696 [m/s],
+            ave velocity is 12.7732 [m/s], v* = 0.0919182
+
+At the end of time step 117 the time is 0:00:3.3492 (hrs:min:sec),
+            time step length is 0.0255816 [sec], volume is 284642 [m^3],
+            max height is 19.8904 [m], max velocity is 25.81 [m/s],
+            ave velocity is 12.8377 [m/s], v* = 0.0923822
+
+At the end of time step 118 the time is 0:00:3.37547 (hrs:min:sec),
+            time step length is 0.0262692 [sec], volume is 284642 [m^3],
+            max height is 19.8717 [m], max velocity is 25.8664 [m/s],
+            ave velocity is 12.9047 [m/s], v* = 0.0928645
+
+At the end of time step 119 the time is 0:00:3.40225 (hrs:min:sec),
+            time step length is 0.0267846 [sec], volume is 284641 [m^3],
+            max height is 19.8073 [m], max velocity is 25.9772 [m/s],
+            ave velocity is 12.9722 [m/s], v* = 0.0933501
+
+At the end of time step 120 the time is 0:00:3.43076 (hrs:min:sec),
+            time step length is 0.0285109 [sec], volume is 284641 [m^3],
+            max height is 19.5362 [m], max velocity is 26.1314 [m/s],
+            ave velocity is 13.0475 [m/s], v* = 0.0938924
+
+At the end of time step 121 the time is 0:00:3.45694 (hrs:min:sec),
+            time step length is 0.0261771 [sec], volume is 284641 [m^3],
+            max height is 19.4408 [m], max velocity is 26.2907 [m/s],
+            ave velocity is 13.1147 [m/s], v* = 0.0943761
+
+At the end of time step 122 the time is 0:00:3.48328 (hrs:min:sec),
+            time step length is 0.0263397 [sec], volume is 284641 [m^3],
+            max height is 19.3482 [m], max velocity is 26.5154 [m/s],
+            ave velocity is 13.1806 [m/s], v* = 0.0948502
+
+At the end of time step 123 the time is 0:00:3.50918 (hrs:min:sec),
+            time step length is 0.0259043 [sec], volume is 284641 [m^3],
+            max height is 19.2649 [m], max velocity is 26.7349 [m/s],
+            ave velocity is 13.2461 [m/s], v* = 0.0953213
+
+At the end of time step 124 the time is 0:00:3.53484 (hrs:min:sec),
+            time step length is 0.0256546 [sec], volume is 284641 [m^3],
+            max height is 19.1802 [m], max velocity is 26.791 [m/s],
+            ave velocity is 13.3109 [m/s], v* = 0.0957876
+
+At the end of time step 125 the time is 0:00:3.56285 (hrs:min:sec),
+            time step length is 0.0280114 [sec], volume is 284641 [m^3],
+            max height is 19.0601 [m], max velocity is 26.5836 [m/s],
+            ave velocity is 13.3857 [m/s], v* = 0.0963256
+
+At the end of time step 126 the time is 0:00:3.58875 (hrs:min:sec),
+            time step length is 0.0259021 [sec], volume is 284641 [m^3],
+            max height is 19.0012 [m], max velocity is 26.6811 [m/s],
+            ave velocity is 13.45 [m/s], v* = 0.0967887
+
+At the end of time step 127 the time is 0:00:3.61427 (hrs:min:sec),
+            time step length is 0.0255196 [sec], volume is 284641 [m^3],
+            max height is 18.9409 [m], max velocity is 26.7972 [m/s],
+            ave velocity is 13.5129 [m/s], v* = 0.0972415
+
+At the end of time step 128 the time is 0:00:3.63981 (hrs:min:sec),
+            time step length is 0.0255414 [sec], volume is 284641 [m^3],
+            max height is 18.8743 [m], max velocity is 26.9036 [m/s],
+            ave velocity is 13.5762 [m/s], v* = 0.0976967
+
+At the end of time step 129 the time is 0:00:3.66558 (hrs:min:sec),
+            time step length is 0.0257677 [sec], volume is 284640 [m^3],
+            max height is 18.8007 [m], max velocity is 27.0017 [m/s],
+            ave velocity is 13.6404 [m/s], v* = 0.0981587
+
+At the end of time step 130 the time is 0:00:3.69376 (hrs:min:sec),
+            time step length is 0.0281795 [sec], volume is 284641 [m^3],
+            max height is 18.5441 [m], max velocity is 27.1727 [m/s],
+            ave velocity is 13.7121 [m/s], v* = 0.0986746
+
+At the end of time step 131 the time is 0:00:3.71971 (hrs:min:sec),
+            time step length is 0.0259485 [sec], volume is 284641 [m^3],
+            max height is 18.4675 [m], max velocity is 27.3392 [m/s],
+            ave velocity is 13.7767 [m/s], v* = 0.0991396
+
+At the end of time step 132 the time is 0:00:3.74578 (hrs:min:sec),
+            time step length is 0.0260733 [sec], volume is 284641 [m^3],
+            max height is 18.4001 [m], max velocity is 27.4336 [m/s],
+            ave velocity is 13.841 [m/s], v* = 0.0996023
+
+At the end of time step 133 the time is 0:00:3.77146 (hrs:min:sec),
+            time step length is 0.0256801 [sec], volume is 284640 [m^3],
+            max height is 18.3233 [m], max velocity is 27.6502 [m/s],
+            ave velocity is 13.9049 [m/s], v* = 0.100062
+
+At the end of time step 134 the time is 0:00:3.79731 (hrs:min:sec),
+            time step length is 0.0258489 [sec], volume is 284640 [m^3],
+            max height is 18.2369 [m], max velocity is 27.7597 [m/s],
+            ave velocity is 13.969 [m/s], v* = 0.100523
+
+At the end of time step 135 the time is 0:00:3.82469 (hrs:min:sec),
+            time step length is 0.0273747 [sec], volume is 284640 [m^3],
+            max height is 18.0926 [m], max velocity is 27.4535 [m/s],
+            ave velocity is 14.0389 [m/s], v* = 0.101026
+
+At the end of time step 136 the time is 0:00:3.85041 (hrs:min:sec),
+            time step length is 0.0257243 [sec], volume is 284640 [m^3],
+            max height is 18.0442 [m], max velocity is 27.5386 [m/s],
+            ave velocity is 14.1008 [m/s], v* = 0.101472
+
+At the end of time step 137 the time is 0:00:3.87619 (hrs:min:sec),
+            time step length is 0.0257824 [sec], volume is 284640 [m^3],
+            max height is 17.9895 [m], max velocity is 27.6414 [m/s],
+            ave velocity is 14.1623 [m/s], v* = 0.101914
+
+At the end of time step 138 the time is 0:00:3.90193 (hrs:min:sec),
+            time step length is 0.0257337 [sec], volume is 284640 [m^3],
+            max height is 17.9277 [m], max velocity is 27.7292 [m/s],
+            ave velocity is 14.2246 [m/s], v* = 0.102363
+
+At the end of time step 139 the time is 0:00:3.92726 (hrs:min:sec),
+            time step length is 0.0253304 [sec], volume is 284640 [m^3],
+            max height is 17.8607 [m], max velocity is 27.8035 [m/s],
+            ave velocity is 14.2863 [m/s], v* = 0.102807
+
+At the end of time step 140 the time is 0:00:3.95505 (hrs:min:sec),
+            time step length is 0.0277924 [sec], volume is 284640 [m^3],
+            max height is 17.6839 [m], max velocity is 28.0004 [m/s],
+            ave velocity is 14.3547 [m/s], v* = 0.103299
+
+At the end of time step 141 the time is 0:00:3.98121 (hrs:min:sec),
+            time step length is 0.0261581 [sec], volume is 284640 [m^3],
+            max height is 17.6198 [m], max velocity is 28.2156 [m/s],
+            ave velocity is 14.4173 [m/s], v* = 0.103749
+
+At the end of time step 142 the time is 0:00:4 (hrs:min:sec),
+            time step length is 0.0187936 [sec], volume is 284640 [m^3],
+            max height is 17.5788 [m], max velocity is 28.2284 [m/s],
+            ave velocity is 14.4617 [m/s], v* = 0.104069
+
+At the end of time step 143 the time is 0:00:4.02563 (hrs:min:sec),
+            time step length is 0.0256266 [sec], volume is 284639 [m^3],
+            max height is 17.4937 [m], max velocity is 28.2011 [m/s],
+            ave velocity is 14.5229 [m/s], v* = 0.104509
+
+At the end of time step 144 the time is 0:00:4.05179 (hrs:min:sec),
+            time step length is 0.026163 [sec], volume is 284639 [m^3],
+            max height is 17.3894 [m], max velocity is 28.3663 [m/s],
+            ave velocity is 14.5857 [m/s], v* = 0.104961
+
+At the end of time step 145 the time is 0:00:4.07869 (hrs:min:sec),
+            time step length is 0.0269039 [sec], volume is 284639 [m^3],
+            max height is 17.2089 [m], max velocity is 28.1725 [m/s],
+            ave velocity is 14.6511 [m/s], v* = 0.105432
+
+At the end of time step 146 the time is 0:00:4.10418 (hrs:min:sec),
+            time step length is 0.0254846 [sec], volume is 284639 [m^3],
+            max height is 17.1678 [m], max velocity is 28.2148 [m/s],
+            ave velocity is 14.7111 [m/s], v* = 0.105864
+
+At the end of time step 147 the time is 0:00:4.12939 (hrs:min:sec),
+            time step length is 0.0252111 [sec], volume is 284639 [m^3],
+            max height is 17.1307 [m], max velocity is 28.265 [m/s],
+            ave velocity is 14.7699 [m/s], v* = 0.106287
+
+At the end of time step 148 the time is 0:00:4.15472 (hrs:min:sec),
+            time step length is 0.025326 [sec], volume is 284639 [m^3],
+            max height is 17.1113 [m], max velocity is 28.3196 [m/s],
+            ave velocity is 14.8295 [m/s], v* = 0.106715
+
+At the end of time step 149 the time is 0:00:4.18019 (hrs:min:sec),
+            time step length is 0.0254736 [sec], volume is 284639 [m^3],
+            max height is 17.0162 [m], max velocity is 28.3762 [m/s],
+            ave velocity is 14.889 [m/s], v* = 0.107144
+
+At the end of time step 150 the time is 0:00:4.20765 (hrs:min:sec),
+            time step length is 0.0274608 [sec], volume is 284639 [m^3],
+            max height is 16.8921 [m], max velocity is 28.5706 [m/s],
+            ave velocity is 14.9536 [m/s], v* = 0.107609
+
+At the end of time step 151 the time is 0:00:4.23317 (hrs:min:sec),
+            time step length is 0.0255248 [sec], volume is 284639 [m^3],
+            max height is 16.8363 [m], max velocity is 28.4964 [m/s],
+            ave velocity is 15.013 [m/s], v* = 0.108036
+
+At the end of time step 152 the time is 0:00:4.25829 (hrs:min:sec),
+            time step length is 0.025118 [sec], volume is 284639 [m^3],
+            max height is 16.7509 [m], max velocity is 28.627 [m/s],
+            ave velocity is 15.0714 [m/s], v* = 0.108456
+
+At the end of time step 153 the time is 0:00:4.28389 (hrs:min:sec),
+            time step length is 0.025597 [sec], volume is 284639 [m^3],
+            max height is 16.6803 [m], max velocity is 28.7545 [m/s],
+            ave velocity is 15.1314 [m/s], v* = 0.108888
+
+At the end of time step 154 the time is 0:00:4.30891 (hrs:min:sec),
+            time step length is 0.0250169 [sec], volume is 284638 [m^3],
+            max height is 16.6538 [m], max velocity is 28.8419 [m/s],
+            ave velocity is 15.1895 [m/s], v* = 0.109306
+
+At the end of time step 155 the time is 0:00:4.33552 (hrs:min:sec),
+            time step length is 0.0266127 [sec], volume is 284639 [m^3],
+            max height is 16.4081 [m], max velocity is 28.9083 [m/s],
+            ave velocity is 15.2527 [m/s], v* = 0.109761
+
+At the end of time step 156 the time is 0:00:4.3608 (hrs:min:sec),
+            time step length is 0.0252846 [sec], volume is 284638 [m^3],
+            max height is 16.384 [m], max velocity is 28.9678 [m/s],
+            ave velocity is 15.3103 [m/s], v* = 0.110176
+
+At the end of time step 157 the time is 0:00:4.38564 (hrs:min:sec),
+            time step length is 0.0248401 [sec], volume is 284638 [m^3],
+            max height is 16.363 [m], max velocity is 29.0299 [m/s],
+            ave velocity is 15.3665 [m/s], v* = 0.11058
+
+At the end of time step 158 the time is 0:00:4.4107 (hrs:min:sec),
+            time step length is 0.0250548 [sec], volume is 284638 [m^3],
+            max height is 16.3409 [m], max velocity is 29.094 [m/s],
+            ave velocity is 15.4237 [m/s], v* = 0.110992
+
+At the end of time step 159 the time is 0:00:4.43587 (hrs:min:sec),
+            time step length is 0.0251714 [sec], volume is 284638 [m^3],
+            max height is 16.3179 [m], max velocity is 29.1587 [m/s],
+            ave velocity is 15.4813 [m/s], v* = 0.111406
+
+At the end of time step 160 the time is 0:00:4.46287 (hrs:min:sec),
+            time step length is 0.0270028 [sec], volume is 284638 [m^3],
+            max height is 16.0588 [m], max velocity is 29.2764 [m/s],
+            ave velocity is 15.5427 [m/s], v* = 0.111848
+
+At the end of time step 161 the time is 0:00:4.48773 (hrs:min:sec),
+            time step length is 0.0248568 [sec], volume is 284638 [m^3],
+            max height is 16.0037 [m], max velocity is 29.3648 [m/s],
+            ave velocity is 15.5993 [m/s], v* = 0.112255
+
+At the end of time step 162 the time is 0:00:4.51259 (hrs:min:sec),
+            time step length is 0.0248603 [sec], volume is 284637 [m^3],
+            max height is 15.918 [m], max velocity is 29.534 [m/s],
+            ave velocity is 15.6559 [m/s], v* = 0.112663
+
+At the end of time step 163 the time is 0:00:4.53758 (hrs:min:sec),
+            time step length is 0.0249871 [sec], volume is 284638 [m^3],
+            max height is 15.8854 [m], max velocity is 29.6178 [m/s],
+            ave velocity is 15.7128 [m/s], v* = 0.113072
+
+At the end of time step 164 the time is 0:00:4.56256 (hrs:min:sec),
+            time step length is 0.0249852 [sec], volume is 284637 [m^3],
+            max height is 15.8609 [m], max velocity is 29.7524 [m/s],
+            ave velocity is 15.77 [m/s], v* = 0.113483
+
+At the end of time step 165 the time is 0:00:4.58899 (hrs:min:sec),
+            time step length is 0.026424 [sec], volume is 284637 [m^3],
+            max height is 15.7026 [m], max velocity is 29.6811 [m/s],
+            ave velocity is 15.8302 [m/s], v* = 0.113917
+
+At the end of time step 166 the time is 0:00:4.61379 (hrs:min:sec),
+            time step length is 0.0247998 [sec], volume is 284637 [m^3],
+            max height is 15.6922 [m], max velocity is 29.7176 [m/s],
+            ave velocity is 15.8853 [m/s], v* = 0.114313
+
+At the end of time step 167 the time is 0:00:4.63871 (hrs:min:sec),
+            time step length is 0.0249273 [sec], volume is 284637 [m^3],
+            max height is 15.6767 [m], max velocity is 29.7851 [m/s],
+            ave velocity is 15.9406 [m/s], v* = 0.114711
+
+At the end of time step 168 the time is 0:00:4.66384 (hrs:min:sec),
+            time step length is 0.0251253 [sec], volume is 284637 [m^3],
+            max height is 15.5524 [m], max velocity is 29.8798 [m/s],
+            ave velocity is 15.9967 [m/s], v* = 0.115115
+
+At the end of time step 169 the time is 0:00:4.68886 (hrs:min:sec),
+            time step length is 0.0250198 [sec], volume is 284637 [m^3],
+            max height is 15.494 [m], max velocity is 29.975 [m/s],
+            ave velocity is 16.0519 [m/s], v* = 0.115512
+
+At the end of time step 170 the time is 0:00:4.71575 (hrs:min:sec),
+            time step length is 0.0268932 [sec], volume is 284637 [m^3],
+            max height is 15.2739 [m], max velocity is 30.0995 [m/s],
+            ave velocity is 16.1123 [m/s], v* = 0.115947
+
+At the end of time step 171 the time is 0:00:4.74018 (hrs:min:sec),
+            time step length is 0.0244314 [sec], volume is 284636 [m^3],
+            max height is 15.2236 [m], max velocity is 30.1866 [m/s],
+            ave velocity is 16.1661 [m/s], v* = 0.116334
+
+At the end of time step 172 the time is 0:00:4.76484 (hrs:min:sec),
+            time step length is 0.0246581 [sec], volume is 284636 [m^3],
+            max height is 15.1783 [m], max velocity is 30.2742 [m/s],
+            ave velocity is 16.2209 [m/s], v* = 0.116728
+
+At the end of time step 173 the time is 0:00:4.78973 (hrs:min:sec),
+            time step length is 0.0248865 [sec], volume is 284637 [m^3],
+            max height is 15.1299 [m], max velocity is 30.3658 [m/s],
+            ave velocity is 16.2763 [m/s], v* = 0.117127
+
+At the end of time step 174 the time is 0:00:4.81463 (hrs:min:sec),
+            time step length is 0.0248986 [sec], volume is 284636 [m^3],
+            max height is 15.0792 [m], max velocity is 30.4561 [m/s],
+            ave velocity is 16.3315 [m/s], v* = 0.117524
+
+At the end of time step 175 the time is 0:00:4.84092 (hrs:min:sec),
+            time step length is 0.0262899 [sec], volume is 284636 [m^3],
+            max height is 14.98 [m], max velocity is 30.5468 [m/s],
+            ave velocity is 16.3895 [m/s], v* = 0.117942
+
+At the end of time step 176 the time is 0:00:4.86556 (hrs:min:sec),
+            time step length is 0.0246448 [sec], volume is 284636 [m^3],
+            max height is 14.9421 [m], max velocity is 30.6238 [m/s],
+            ave velocity is 16.4434 [m/s], v* = 0.11833
+
+At the end of time step 177 the time is 0:00:4.89041 (hrs:min:sec),
+            time step length is 0.0248442 [sec], volume is 284636 [m^3],
+            max height is 14.9019 [m], max velocity is 30.6948 [m/s],
+            ave velocity is 16.4977 [m/s], v* = 0.118721
+
+At the end of time step 178 the time is 0:00:4.91511 (hrs:min:sec),
+            time step length is 0.024705 [sec], volume is 284637 [m^3],
+            max height is 14.8598 [m], max velocity is 30.76 [m/s],
+            ave velocity is 16.5511 [m/s], v* = 0.119104
+
+At the end of time step 179 the time is 0:00:4.94 (hrs:min:sec),
+            time step length is 0.0248889 [sec], volume is 284636 [m^3],
+            max height is 14.8155 [m], max velocity is 30.821 [m/s],
+            ave velocity is 16.6052 [m/s], v* = 0.119494
+
+At the end of time step 180 the time is 0:00:4.96653 (hrs:min:sec),
+            time step length is 0.026534 [sec], volume is 284635 [m^3],
+            max height is 14.662 [m], max velocity is 30.8433 [m/s],
+            ave velocity is 16.6623 [m/s], v* = 0.119905
+
+At the end of time step 181 the time is 0:00:4.99109 (hrs:min:sec),
+            time step length is 0.0245605 [sec], volume is 284635 [m^3],
+            max height is 14.6048 [m], max velocity is 30.8981 [m/s],
+            ave velocity is 16.7151 [m/s], v* = 0.120285
+
+At the end of time step 182 the time is 0:00:5 (hrs:min:sec),
+            time step length is 0.00890647 [sec], volume is 284635 [m^3],
+            max height is 14.5836 [m], max velocity is 30.918 [m/s],
+            ave velocity is 16.7341 [m/s], v* = 0.120422
+
+At the end of time step 183 the time is 0:00:5.02472 (hrs:min:sec),
+            time step length is 0.0247217 [sec], volume is 284635 [m^3],
+            max height is 14.5243 [m], max velocity is 30.9717 [m/s],
+            ave velocity is 16.7867 [m/s], v* = 0.1208
+
+At the end of time step 184 the time is 0:00:5.04953 (hrs:min:sec),
+            time step length is 0.0248053 [sec], volume is 284635 [m^3],
+            max height is 14.4637 [m], max velocity is 31.0247 [m/s],
+            ave velocity is 16.8397 [m/s], v* = 0.121182
+
+At the end of time step 185 the time is 0:00:5.07576 (hrs:min:sec),
+            time step length is 0.0262345 [sec], volume is 284635 [m^3],
+            max height is 14.3826 [m], max velocity is 31.1679 [m/s],
+            ave velocity is 16.8965 [m/s], v* = 0.12159
+
+At the end of time step 186 the time is 0:00:5.10076 (hrs:min:sec),
+            time step length is 0.0250033 [sec], volume is 284635 [m^3],
+            max height is 14.3471 [m], max velocity is 31.2885 [m/s],
+            ave velocity is 16.9507 [m/s], v* = 0.121981
+
+At the end of time step 187 the time is 0:00:5.12541 (hrs:min:sec),
+            time step length is 0.0246489 [sec], volume is 284634 [m^3],
+            max height is 14.3082 [m], max velocity is 31.3939 [m/s],
+            ave velocity is 17.0028 [m/s], v* = 0.122355
+
+At the end of time step 188 the time is 0:00:5.15034 (hrs:min:sec),
+            time step length is 0.0249308 [sec], volume is 284635 [m^3],
+            max height is 14.2607 [m], max velocity is 31.4938 [m/s],
+            ave velocity is 17.0561 [m/s], v* = 0.122739
+
+At the end of time step 189 the time is 0:00:5.17497 (hrs:min:sec),
+            time step length is 0.0246247 [sec], volume is 284634 [m^3],
+            max height is 14.1689 [m], max velocity is 31.4985 [m/s],
+            ave velocity is 17.1079 [m/s], v* = 0.123112
+
+At the end of time step 190 the time is 0:00:5.20139 (hrs:min:sec),
+            time step length is 0.0264256 [sec], volume is 284634 [m^3],
+            max height is 14.0266 [m], max velocity is 31.5113 [m/s],
+            ave velocity is 17.1626 [m/s], v* = 0.123505
+
+At the end of time step 191 the time is 0:00:5.22659 (hrs:min:sec),
+            time step length is 0.025198 [sec], volume is 284634 [m^3],
+            max height is 13.9823 [m], max velocity is 31.5399 [m/s],
+            ave velocity is 17.2155 [m/s], v* = 0.123886
+
+At the end of time step 192 the time is 0:00:5.2514 (hrs:min:sec),
+            time step length is 0.0248031 [sec], volume is 284634 [m^3],
+            max height is 13.9365 [m], max velocity is 31.5654 [m/s],
+            ave velocity is 17.2684 [m/s], v* = 0.124266
+
+At the end of time step 193 the time is 0:00:5.27597 (hrs:min:sec),
+            time step length is 0.0245711 [sec], volume is 284633 [m^3],
+            max height is 13.889 [m], max velocity is 31.589 [m/s],
+            ave velocity is 17.3205 [m/s], v* = 0.124641
+
+At the end of time step 194 the time is 0:00:5.30078 (hrs:min:sec),
+            time step length is 0.0248148 [sec], volume is 284634 [m^3],
+            max height is 13.8391 [m], max velocity is 31.612 [m/s],
+            ave velocity is 17.3725 [m/s], v* = 0.125016
+
+At the end of time step 195 the time is 0:00:5.32696 (hrs:min:sec),
+            time step length is 0.0261756 [sec], volume is 284633 [m^3],
+            max height is 13.7544 [m], max velocity is 31.7548 [m/s],
+            ave velocity is 17.4272 [m/s], v* = 0.125409
+
+At the end of time step 196 the time is 0:00:5.35164 (hrs:min:sec),
+            time step length is 0.0246782 [sec], volume is 284633 [m^3],
+            max height is 13.7129 [m], max velocity is 31.871 [m/s],
+            ave velocity is 17.4794 [m/s], v* = 0.125785
+
+At the end of time step 197 the time is 0:00:5.37592 (hrs:min:sec),
+            time step length is 0.0242808 [sec], volume is 284633 [m^3],
+            max height is 13.6772 [m], max velocity is 31.9695 [m/s],
+            ave velocity is 17.5304 [m/s], v* = 0.126152
+
+At the end of time step 198 the time is 0:00:5.39999 (hrs:min:sec),
+            time step length is 0.024074 [sec], volume is 284633 [m^3],
+            max height is 13.6392 [m], max velocity is 32.0601 [m/s],
+            ave velocity is 17.581 [m/s], v* = 0.126516
+
+At the end of time step 199 the time is 0:00:5.42387 (hrs:min:sec),
+            time step length is 0.0238801 [sec], volume is 284633 [m^3],
+            max height is 13.5996 [m], max velocity is 32.1459 [m/s],
+            ave velocity is 17.6308 [m/s], v* = 0.126875
+
+At the end of time step 200 the time is 0:00:5.45005 (hrs:min:sec),
+            time step length is 0.026182 [sec], volume is 284633 [m^3],
+            max height is 13.4401 [m], max velocity is 32.0219 [m/s],
+            ave velocity is 17.6848 [m/s], v* = 0.127263
+
+At the end of time step 201 the time is 0:00:5.47463 (hrs:min:sec),
+            time step length is 0.0245783 [sec], volume is 284632 [m^3],
+            max height is 13.3858 [m], max velocity is 32.0183 [m/s],
+            ave velocity is 17.7356 [m/s], v* = 0.127629
+
+At the end of time step 202 the time is 0:00:5.4995 (hrs:min:sec),
+            time step length is 0.024873 [sec], volume is 284632 [m^3],
+            max height is 13.3295 [m], max velocity is 32.0537 [m/s],
+            ave velocity is 17.787 [m/s], v* = 0.127999
+
+At the end of time step 203 the time is 0:00:5.52412 (hrs:min:sec),
+            time step length is 0.0246161 [sec], volume is 284632 [m^3],
+            max height is 13.2727 [m], max velocity is 32.0789 [m/s],
+            ave velocity is 17.8371 [m/s], v* = 0.128359
+
+At the end of time step 204 the time is 0:00:5.54897 (hrs:min:sec),
+            time step length is 0.0248505 [sec], volume is 284632 [m^3],
+            max height is 13.2146 [m], max velocity is 32.0974 [m/s],
+            ave velocity is 17.8884 [m/s], v* = 0.128728
+
+At the end of time step 205 the time is 0:00:5.57515 (hrs:min:sec),
+            time step length is 0.0261827 [sec], volume is 284632 [m^3],
+            max height is 13.1405 [m], max velocity is 32.2406 [m/s],
+            ave velocity is 17.9411 [m/s], v* = 0.129107
+
+At the end of time step 206 the time is 0:00:5.59989 (hrs:min:sec),
+            time step length is 0.0247407 [sec], volume is 284632 [m^3],
+            max height is 13.1073 [m], max velocity is 32.3482 [m/s],
+            ave velocity is 17.991 [m/s], v* = 0.129466
+
+At the end of time step 207 the time is 0:00:5.62394 (hrs:min:sec),
+            time step length is 0.0240438 [sec], volume is 284632 [m^3],
+            max height is 13.075 [m], max velocity is 32.4321 [m/s],
+            ave velocity is 18.0394 [m/s], v* = 0.129815
+
+At the end of time step 208 the time is 0:00:5.64844 (hrs:min:sec),
+            time step length is 0.0245073 [sec], volume is 284632 [m^3],
+            max height is 13.0367 [m], max velocity is 32.5074 [m/s],
+            ave velocity is 18.0891 [m/s], v* = 0.130172
+
+At the end of time step 209 the time is 0:00:5.67269 (hrs:min:sec),
+            time step length is 0.0242445 [sec], volume is 284632 [m^3],
+            max height is 13.0192 [m], max velocity is 32.5737 [m/s],
+            ave velocity is 18.1374 [m/s], v* = 0.13052
+
+At the end of time step 210 the time is 0:00:5.69876 (hrs:min:sec),
+            time step length is 0.0260732 [sec], volume is 284631 [m^3],
+            max height is 12.8141 [m], max velocity is 32.434 [m/s],
+            ave velocity is 18.1891 [m/s], v* = 0.130892
+
+At the end of time step 211 the time is 0:00:5.7237 (hrs:min:sec),
+            time step length is 0.0249338 [sec], volume is 284631 [m^3],
+            max height is 12.7618 [m], max velocity is 32.506 [m/s],
+            ave velocity is 18.2387 [m/s], v* = 0.131249
+
+At the end of time step 212 the time is 0:00:5.7485 (hrs:min:sec),
+            time step length is 0.0248024 [sec], volume is 284631 [m^3],
+            max height is 12.709 [m], max velocity is 32.5885 [m/s],
+            ave velocity is 18.2873 [m/s], v* = 0.131599
+
+At the end of time step 213 the time is 0:00:5.77343 (hrs:min:sec),
+            time step length is 0.0249309 [sec], volume is 284631 [m^3],
+            max height is 12.6551 [m], max velocity is 32.6833 [m/s],
+            ave velocity is 18.337 [m/s], v* = 0.131956
+
+At the end of time step 214 the time is 0:00:5.79814 (hrs:min:sec),
+            time step length is 0.024709 [sec], volume is 284631 [m^3],
+            max height is 12.603 [m], max velocity is 32.773 [m/s],
+            ave velocity is 18.3868 [m/s], v* = 0.132314
+
+At the end of time step 215 the time is 0:00:5.82406 (hrs:min:sec),
+            time step length is 0.0259252 [sec], volume is 284631 [m^3],
+            max height is 12.5344 [m], max velocity is 32.8626 [m/s],
+            ave velocity is 18.4384 [m/s], v* = 0.132686
+
+At the end of time step 216 the time is 0:00:5.84859 (hrs:min:sec),
+            time step length is 0.024522 [sec], volume is 284631 [m^3],
+            max height is 12.5023 [m], max velocity is 32.9445 [m/s],
+            ave velocity is 18.4868 [m/s], v* = 0.133034
+
+At the end of time step 217 the time is 0:00:5.8731 (hrs:min:sec),
+            time step length is 0.0245144 [sec], volume is 284630 [m^3],
+            max height is 12.4741 [m], max velocity is 33.0155 [m/s],
+            ave velocity is 18.5354 [m/s], v* = 0.133384
+
+At the end of time step 218 the time is 0:00:5.89733 (hrs:min:sec),
+            time step length is 0.0242291 [sec], volume is 284629 [m^3],
+            max height is 12.442 [m], max velocity is 33.0787 [m/s],
+            ave velocity is 18.5832 [m/s], v* = 0.133728
+
+At the end of time step 219 the time is 0:00:5.92151 (hrs:min:sec),
+            time step length is 0.0241844 [sec], volume is 284629 [m^3],
+            max height is 12.3569 [m], max velocity is 33.1388 [m/s],
+            ave velocity is 18.6313 [m/s], v* = 0.134074
+
+At the end of time step 220 the time is 0:00:5.94739 (hrs:min:sec),
+            time step length is 0.0258712 [sec], volume is 284630 [m^3],
+            max height is 12.2049 [m], max velocity is 33.2312 [m/s],
+            ave velocity is 18.6813 [m/s], v* = 0.134434
+
+At the end of time step 221 the time is 0:00:5.97128 (hrs:min:sec),
+            time step length is 0.0238921 [sec], volume is 284629 [m^3],
+            max height is 12.1694 [m], max velocity is 33.3155 [m/s],
+            ave velocity is 18.7287 [m/s], v* = 0.134775
+
+At the end of time step 222 the time is 0:00:5.9959 (hrs:min:sec),
+            time step length is 0.0246178 [sec], volume is 284629 [m^3],
+            max height is 12.1296 [m], max velocity is 33.3885 [m/s],
+            ave velocity is 18.7771 [m/s], v* = 0.135123
+
+At the end of time step 223 the time is 0:00:6 (hrs:min:sec),
+            time step length is 0.00410491 [sec], volume is 284629 [m^3],
+            max height is 12.1226 [m], max velocity is 33.4003 [m/s],
+            ave velocity is 18.7851 [m/s], v* = 0.135181
+
+At the end of time step 224 the time is 0:00:6.02403 (hrs:min:sec),
+            time step length is 0.0240291 [sec], volume is 284629 [m^3],
+            max height is 12.0809 [m], max velocity is 33.459 [m/s],
+            ave velocity is 18.832 [m/s], v* = 0.135519
+
+At the end of time step 225 the time is 0:00:6.04969 (hrs:min:sec),
+            time step length is 0.0256637 [sec], volume is 284629 [m^3],
+            max height is 12.0254 [m], max velocity is 33.5269 [m/s],
+            ave velocity is 18.8817 [m/s], v* = 0.135876
+
+At the end of time step 226 the time is 0:00:6.07416 (hrs:min:sec),
+            time step length is 0.0244623 [sec], volume is 284629 [m^3],
+            max height is 11.9907 [m], max velocity is 33.5828 [m/s],
+            ave velocity is 18.9288 [m/s], v* = 0.136215
+
+At the end of time step 227 the time is 0:00:6.09848 (hrs:min:sec),
+            time step length is 0.0243294 [sec], volume is 284629 [m^3],
+            max height is 11.9532 [m], max velocity is 33.6512 [m/s],
+            ave velocity is 18.9756 [m/s], v* = 0.136552
+
+At the end of time step 228 the time is 0:00:6.12283 (hrs:min:sec),
+            time step length is 0.0243481 [sec], volume is 284628 [m^3],
+            max height is 11.9208 [m], max velocity is 33.7127 [m/s],
+            ave velocity is 19.0225 [m/s], v* = 0.13689
+
+At the end of time step 229 the time is 0:00:6.14716 (hrs:min:sec),
+            time step length is 0.0243299 [sec], volume is 284628 [m^3],
+            max height is 11.8929 [m], max velocity is 33.7687 [m/s],
+            ave velocity is 19.0695 [m/s], v* = 0.137228
+
+At the end of time step 230 the time is 0:00:6.17309 (hrs:min:sec),
+            time step length is 0.0259227 [sec], volume is 284628 [m^3],
+            max height is 11.7405 [m], max velocity is 33.8251 [m/s],
+            ave velocity is 19.1186 [m/s], v* = 0.137581
+
+At the end of time step 231 the time is 0:00:6.19735 (hrs:min:sec),
+            time step length is 0.024262 [sec], volume is 284628 [m^3],
+            max height is 11.6941 [m], max velocity is 33.7529 [m/s],
+            ave velocity is 19.1651 [m/s], v* = 0.137915
+
+At the end of time step 232 the time is 0:00:6.22169 (hrs:min:sec),
+            time step length is 0.0243408 [sec], volume is 284628 [m^3],
+            max height is 11.6465 [m], max velocity is 33.8912 [m/s],
+            ave velocity is 19.2119 [m/s], v* = 0.138252
+
+At the end of time step 233 the time is 0:00:6.2457 (hrs:min:sec),
+            time step length is 0.0240089 [sec], volume is 284628 [m^3],
+            max height is 11.6249 [m], max velocity is 33.9296 [m/s],
+            ave velocity is 19.2588 [m/s], v* = 0.13859
+
+At the end of time step 234 the time is 0:00:6.27003 (hrs:min:sec),
+            time step length is 0.024332 [sec], volume is 284627 [m^3],
+            max height is 11.6035 [m], max velocity is 33.9154 [m/s],
+            ave velocity is 19.3063 [m/s], v* = 0.138931
+
+At the end of time step 235 the time is 0:00:6.29548 (hrs:min:sec),
+            time step length is 0.0254547 [sec], volume is 284627 [m^3],
+            max height is 11.4975 [m], max velocity is 33.9421 [m/s],
+            ave velocity is 19.3541 [m/s], v* = 0.139275
+
+At the end of time step 236 the time is 0:00:6.32012 (hrs:min:sec),
+            time step length is 0.0246322 [sec], volume is 284627 [m^3],
+            max height is 11.4585 [m], max velocity is 33.9428 [m/s],
+            ave velocity is 19.4008 [m/s], v* = 0.139611
+
+At the end of time step 237 the time is 0:00:6.34415 (hrs:min:sec),
+            time step length is 0.0240343 [sec], volume is 284627 [m^3],
+            max height is 11.4372 [m], max velocity is 33.9654 [m/s],
+            ave velocity is 19.4464 [m/s], v* = 0.13994
+
+At the end of time step 238 the time is 0:00:6.36797 (hrs:min:sec),
+            time step length is 0.0238189 [sec], volume is 284626 [m^3],
+            max height is 11.3781 [m], max velocity is 33.9938 [m/s],
+            ave velocity is 19.4916 [m/s], v* = 0.140265
+
+At the end of time step 239 the time is 0:00:6.39203 (hrs:min:sec),
+            time step length is 0.0240626 [sec], volume is 284626 [m^3],
+            max height is 11.3632 [m], max velocity is 34.027 [m/s],
+            ave velocity is 19.5377 [m/s], v* = 0.140597
+
+At the end of time step 240 the time is 0:00:6.41757 (hrs:min:sec),
+            time step length is 0.0255424 [sec], volume is 284626 [m^3],
+            max height is 11.2472 [m], max velocity is 34.0318 [m/s],
+            ave velocity is 19.5855 [m/s], v* = 0.140941
+
+At the end of time step 241 the time is 0:00:6.44203 (hrs:min:sec),
+            time step length is 0.0244593 [sec], volume is 284626 [m^3],
+            max height is 11.2216 [m], max velocity is 34.1209 [m/s],
+            ave velocity is 19.6324 [m/s], v* = 0.141278
+
+At the end of time step 242 the time is 0:00:6.46631 (hrs:min:sec),
+            time step length is 0.0242723 [sec], volume is 284625 [m^3],
+            max height is 11.1944 [m], max velocity is 34.209 [m/s],
+            ave velocity is 19.6779 [m/s], v* = 0.141605
+
+At the end of time step 243 the time is 0:00:6.49038 (hrs:min:sec),
+            time step length is 0.0240788 [sec], volume is 284626 [m^3],
+            max height is 11.1727 [m], max velocity is 34.3034 [m/s],
+            ave velocity is 19.723 [m/s], v* = 0.14193
+
+At the end of time step 244 the time is 0:00:6.51453 (hrs:min:sec),
+            time step length is 0.0241443 [sec], volume is 284625 [m^3],
+            max height is 11.1507 [m], max velocity is 34.3985 [m/s],
+            ave velocity is 19.769 [m/s], v* = 0.142261
+
+At the end of time step 245 the time is 0:00:6.53976 (hrs:min:sec),
+            time step length is 0.025234 [sec], volume is 284625 [m^3],
+            max height is 11.0397 [m], max velocity is 34.4982 [m/s],
+            ave velocity is 19.8161 [m/s], v* = 0.1426
+
+At the end of time step 246 the time is 0:00:6.56342 (hrs:min:sec),
+            time step length is 0.0236579 [sec], volume is 284625 [m^3],
+            max height is 10.9842 [m], max velocity is 34.5872 [m/s],
+            ave velocity is 19.8599 [m/s], v* = 0.142915
+
+At the end of time step 247 the time is 0:00:6.58743 (hrs:min:sec),
+            time step length is 0.0240101 [sec], volume is 284625 [m^3],
+            max height is 10.9511 [m], max velocity is 34.6834 [m/s],
+            ave velocity is 19.9046 [m/s], v* = 0.143237
+
+At the end of time step 248 the time is 0:00:6.61119 (hrs:min:sec),
+            time step length is 0.0237549 [sec], volume is 284624 [m^3],
+            max height is 10.9168 [m], max velocity is 34.7793 [m/s],
+            ave velocity is 19.9483 [m/s], v* = 0.143551
+
+At the end of time step 249 the time is 0:00:6.63498 (hrs:min:sec),
+            time step length is 0.0237899 [sec], volume is 284625 [m^3],
+            max height is 10.881 [m], max velocity is 34.8707 [m/s],
+            ave velocity is 19.9931 [m/s], v* = 0.143874
+
+At the end of time step 250 the time is 0:00:6.66027 (hrs:min:sec),
+            time step length is 0.0252905 [sec], volume is 284624 [m^3],
+            max height is 10.8363 [m], max velocity is 34.9622 [m/s],
+            ave velocity is 20.0397 [m/s], v* = 0.144209
+
+At the end of time step 251 the time is 0:00:6.68432 (hrs:min:sec),
+            time step length is 0.02405 [sec], volume is 284623 [m^3],
+            max height is 10.797 [m], max velocity is 35.0448 [m/s],
+            ave velocity is 20.0851 [m/s], v* = 0.144536
+
+At the end of time step 252 the time is 0:00:6.70839 (hrs:min:sec),
+            time step length is 0.0240781 [sec], volume is 284624 [m^3],
+            max height is 10.7627 [m], max velocity is 35.1249 [m/s],
+            ave velocity is 20.1304 [m/s], v* = 0.144862
+
+At the end of time step 253 the time is 0:00:6.73253 (hrs:min:sec),
+            time step length is 0.0241399 [sec], volume is 284624 [m^3],
+            max height is 10.7405 [m], max velocity is 35.2145 [m/s],
+            ave velocity is 20.1762 [m/s], v* = 0.145192
+
+At the end of time step 254 the time is 0:00:6.75646 (hrs:min:sec),
+            time step length is 0.0239219 [sec], volume is 284623 [m^3],
+            max height is 10.6884 [m], max velocity is 35.2987 [m/s],
+            ave velocity is 20.222 [m/s], v* = 0.145521
+
+At the end of time step 255 the time is 0:00:6.78146 (hrs:min:sec),
+            time step length is 0.0250062 [sec], volume is 284623 [m^3],
+            max height is 10.5705 [m], max velocity is 35.3817 [m/s],
+            ave velocity is 20.2673 [m/s], v* = 0.145847
+
+At the end of time step 256 the time is 0:00:6.80546 (hrs:min:sec),
+            time step length is 0.0239996 [sec], volume is 284622 [m^3],
+            max height is 10.531 [m], max velocity is 35.4571 [m/s],
+            ave velocity is 20.3106 [m/s], v* = 0.146159
+
+At the end of time step 257 the time is 0:00:6.82952 (hrs:min:sec),
+            time step length is 0.0240555 [sec], volume is 284623 [m^3],
+            max height is 10.4772 [m], max velocity is 35.5398 [m/s],
+            ave velocity is 20.3544 [m/s], v* = 0.146474
+
+At the end of time step 258 the time is 0:00:6.85355 (hrs:min:sec),
+            time step length is 0.0240301 [sec], volume is 284622 [m^3],
+            max height is 10.4473 [m], max velocity is 35.6304 [m/s],
+            ave velocity is 20.3985 [m/s], v* = 0.146791
+
+At the end of time step 259 the time is 0:00:6.87761 (hrs:min:sec),
+            time step length is 0.0240589 [sec], volume is 284622 [m^3],
+            max height is 10.4153 [m], max velocity is 35.7166 [m/s],
+            ave velocity is 20.4429 [m/s], v* = 0.147111
+
+At the end of time step 260 the time is 0:00:6.90289 (hrs:min:sec),
+            time step length is 0.0252807 [sec], volume is 284621 [m^3],
+            max height is 10.3834 [m], max velocity is 35.8049 [m/s],
+            ave velocity is 20.4888 [m/s], v* = 0.147441
+
+At the end of time step 261 the time is 0:00:6.92704 (hrs:min:sec),
+            time step length is 0.0241576 [sec], volume is 284622 [m^3],
+            max height is 10.3773 [m], max velocity is 35.915 [m/s],
+            ave velocity is 20.533 [m/s], v* = 0.147759
+
+At the end of time step 262 the time is 0:00:6.95109 (hrs:min:sec),
+            time step length is 0.0240432 [sec], volume is 284621 [m^3],
+            max height is 10.3772 [m], max velocity is 36.0446 [m/s],
+            ave velocity is 20.5769 [m/s], v* = 0.148075
+
+At the end of time step 263 the time is 0:00:6.975 (hrs:min:sec),
+            time step length is 0.0239115 [sec], volume is 284622 [m^3],
+            max height is 10.3548 [m], max velocity is 36.166 [m/s],
+            ave velocity is 20.6205 [m/s], v* = 0.148389
+
+At the end of time step 264 the time is 0:00:6.99902 (hrs:min:sec),
+            time step length is 0.0240232 [sec], volume is 284621 [m^3],
+            max height is 10.2959 [m], max velocity is 36.2812 [m/s],
+            ave velocity is 20.665 [m/s], v* = 0.148709
+
+At the end of time step 265 the time is 0:00:7 (hrs:min:sec),
+            time step length is 0.000977507 [sec], volume is 284621 [m^3],
+            max height is 10.1581 [m], max velocity is 36.2863 [m/s],
+            ave velocity is 20.6662 [m/s], v* = 0.148717
+
+At the end of time step 266 the time is 0:00:7.02413 (hrs:min:sec),
+            time step length is 0.0241256 [sec], volume is 284621 [m^3],
+            max height is 10.1647 [m], max velocity is 36.404 [m/s],
+            ave velocity is 20.7084 [m/s], v* = 0.149022
+
+At the end of time step 267 the time is 0:00:7.04834 (hrs:min:sec),
+            time step length is 0.0242148 [sec], volume is 284622 [m^3],
+            max height is 10.1695 [m], max velocity is 36.5218 [m/s],
+            ave velocity is 20.7518 [m/s], v* = 0.149334
+
+At the end of time step 268 the time is 0:00:7.07205 (hrs:min:sec),
+            time step length is 0.0237096 [sec], volume is 284621 [m^3],
+            max height is 10.1493 [m], max velocity is 36.6311 [m/s],
+            ave velocity is 20.7938 [m/s], v* = 0.149636
+
+At the end of time step 269 the time is 0:00:7.09618 (hrs:min:sec),
+            time step length is 0.024129 [sec], volume is 284620 [m^3],
+            max height is 10.1097 [m], max velocity is 36.7364 [m/s],
+            ave velocity is 20.8375 [m/s], v* = 0.149951
+
+At the end of time step 270 the time is 0:00:7.12136 (hrs:min:sec),
+            time step length is 0.0251859 [sec], volume is 284620 [m^3],
+            max height is 10.1002 [m], max velocity is 36.8402 [m/s],
+            ave velocity is 20.8829 [m/s], v* = 0.150277
+
+At the end of time step 271 the time is 0:00:7.14513 (hrs:min:sec),
+            time step length is 0.0237642 [sec], volume is 284620 [m^3],
+            max height is 10.0862 [m], max velocity is 36.9375 [m/s],
+            ave velocity is 20.9264 [m/s], v* = 0.15059
+
+At the end of time step 272 the time is 0:00:7.16936 (hrs:min:sec),
+            time step length is 0.0242278 [sec], volume is 284620 [m^3],
+            max height is 10.0303 [m], max velocity is 37.0444 [m/s],
+            ave velocity is 20.9704 [m/s], v* = 0.150906
+
+At the end of time step 273 the time is 0:00:7.19309 (hrs:min:sec),
+            time step length is 0.0237346 [sec], volume is 284620 [m^3],
+            max height is 10.0436 [m], max velocity is 37.1436 [m/s],
+            ave velocity is 21.014 [m/s], v* = 0.151221
+
+At the end of time step 274 the time is 0:00:7.2169 (hrs:min:sec),
+            time step length is 0.0238055 [sec], volume is 284619 [m^3],
+            max height is 10.0113 [m], max velocity is 37.2378 [m/s],
+            ave velocity is 21.0577 [m/s], v* = 0.151535
+
+At the end of time step 275 the time is 0:00:7.2416 (hrs:min:sec),
+            time step length is 0.0247046 [sec], volume is 284619 [m^3],
+            max height is 9.90332 [m], max velocity is 37.3299 [m/s],
+            ave velocity is 21.1007 [m/s], v* = 0.151845
+
+At the end of time step 276 the time is 0:00:7.26557 (hrs:min:sec),
+            time step length is 0.02397 [sec], volume is 284619 [m^3],
+            max height is 9.91697 [m], max velocity is 37.4143 [m/s],
+            ave velocity is 21.1428 [m/s], v* = 0.152147
+
+At the end of time step 277 the time is 0:00:7.28949 (hrs:min:sec),
+            time step length is 0.0239158 [sec], volume is 284619 [m^3],
+            max height is 9.88901 [m], max velocity is 37.4936 [m/s],
+            ave velocity is 21.1858 [m/s], v* = 0.152457
+
+At the end of time step 278 the time is 0:00:7.31334 (hrs:min:sec),
+            time step length is 0.0238479 [sec], volume is 284618 [m^3],
+            max height is 9.90423 [m], max velocity is 37.5676 [m/s],
+            ave velocity is 21.2289 [m/s], v* = 0.152767
+
+At the end of time step 279 the time is 0:00:7.33729 (hrs:min:sec),
+            time step length is 0.0239583 [sec], volume is 284618 [m^3],
+            max height is 9.85043 [m], max velocity is 37.6371 [m/s],
+            ave velocity is 21.2725 [m/s], v* = 0.153081
+
+At the end of time step 280 the time is 0:00:7.36236 (hrs:min:sec),
+            time step length is 0.025064 [sec], volume is 284617 [m^3],
+            max height is 9.76125 [m], max velocity is 37.704 [m/s],
+            ave velocity is 21.3155 [m/s], v* = 0.15339
+
+At the end of time step 281 the time is 0:00:7.38622 (hrs:min:sec),
+            time step length is 0.0238609 [sec], volume is 284619 [m^3],
+            max height is 9.71584 [m], max velocity is 37.7624 [m/s],
+            ave velocity is 21.3576 [m/s], v* = 0.153693
+
+At the end of time step 282 the time is 0:00:7.41034 (hrs:min:sec),
+            time step length is 0.0241252 [sec], volume is 284618 [m^3],
+            max height is 9.71788 [m], max velocity is 37.8141 [m/s],
+            ave velocity is 21.4006 [m/s], v* = 0.154003
+
+At the end of time step 283 the time is 0:00:7.43426 (hrs:min:sec),
+            time step length is 0.0239154 [sec], volume is 284617 [m^3],
+            max height is 9.71842 [m], max velocity is 37.6773 [m/s],
+            ave velocity is 21.4432 [m/s], v* = 0.154309
+
+At the end of time step 284 the time is 0:00:7.45808 (hrs:min:sec),
+            time step length is 0.0238261 [sec], volume is 284617 [m^3],
+            max height is 9.72919 [m], max velocity is 37.7126 [m/s],
+            ave velocity is 21.4867 [m/s], v* = 0.154622
+
+At the end of time step 285 the time is 0:00:7.48275 (hrs:min:sec),
+            time step length is 0.024669 [sec], volume is 284617 [m^3],
+            max height is 9.7506 [m], max velocity is 37.9499 [m/s],
+            ave velocity is 21.5281 [m/s], v* = 0.15492
+
+At the end of time step 286 the time is 0:00:7.5069 (hrs:min:sec),
+            time step length is 0.0241491 [sec], volume is 284617 [m^3],
+            max height is 9.76914 [m], max velocity is 37.9871 [m/s],
+            ave velocity is 21.5699 [m/s], v* = 0.155221
+
+At the end of time step 287 the time is 0:00:7.53091 (hrs:min:sec),
+            time step length is 0.0240062 [sec], volume is 284617 [m^3],
+            max height is 9.77105 [m], max velocity is 38.0214 [m/s],
+            ave velocity is 21.6116 [m/s], v* = 0.155521
+
+At the end of time step 288 the time is 0:00:7.55488 (hrs:min:sec),
+            time step length is 0.0239755 [sec], volume is 284616 [m^3],
+            max height is 9.81595 [m], max velocity is 38.048 [m/s],
+            ave velocity is 21.6533 [m/s], v* = 0.155821
+
+At the end of time step 289 the time is 0:00:7.57892 (hrs:min:sec),
+            time step length is 0.0240346 [sec], volume is 284615 [m^3],
+            max height is 9.74698 [m], max velocity is 38.0666 [m/s],
+            ave velocity is 21.6956 [m/s], v* = 0.156126
+
+At the end of time step 290 the time is 0:00:7.60384 (hrs:min:sec),
+            time step length is 0.0249222 [sec], volume is 284616 [m^3],
+            max height is 9.64164 [m], max velocity is 38.0359 [m/s],
+            ave velocity is 21.7384 [m/s], v* = 0.156433
+
+At the end of time step 291 the time is 0:00:7.62777 (hrs:min:sec),
+            time step length is 0.0239247 [sec], volume is 284615 [m^3],
+            max height is 9.64 [m], max velocity is 38.0526 [m/s],
+            ave velocity is 21.7806 [m/s], v* = 0.156737
+
+At the end of time step 292 the time is 0:00:7.65149 (hrs:min:sec),
+            time step length is 0.0237228 [sec], volume is 284615 [m^3],
+            max height is 9.58891 [m], max velocity is 38.0479 [m/s],
+            ave velocity is 21.8227 [m/s], v* = 0.15704
+
+At the end of time step 293 the time is 0:00:7.67549 (hrs:min:sec),
+            time step length is 0.0240012 [sec], volume is 284615 [m^3],
+            max height is 9.58744 [m], max velocity is 38.0309 [m/s],
+            ave velocity is 21.8648 [m/s], v* = 0.157343
+
+At the end of time step 294 the time is 0:00:7.69936 (hrs:min:sec),
+            time step length is 0.0238652 [sec], volume is 284614 [m^3],
+            max height is 9.64244 [m], max velocity is 38.0115 [m/s],
+            ave velocity is 21.9069 [m/s], v* = 0.157646
+
+At the end of time step 295 the time is 0:00:7.72411 (hrs:min:sec),
+            time step length is 0.024752 [sec], volume is 284615 [m^3],
+            max height is 9.60634 [m], max velocity is 37.9468 [m/s],
+            ave velocity is 21.9483 [m/s], v* = 0.157944
+
+At the end of time step 296 the time is 0:00:7.74817 (hrs:min:sec),
+            time step length is 0.0240627 [sec], volume is 284615 [m^3],
+            max height is 9.6098 [m], max velocity is 37.9111 [m/s],
+            ave velocity is 21.989 [m/s], v* = 0.158237
+
+At the end of time step 297 the time is 0:00:7.77224 (hrs:min:sec),
+            time step length is 0.0240647 [sec], volume is 284614 [m^3],
+            max height is 9.52233 [m], max velocity is 37.8922 [m/s],
+            ave velocity is 22.0303 [m/s], v* = 0.158534
+
+At the end of time step 298 the time is 0:00:7.7961 (hrs:min:sec),
+            time step length is 0.0238695 [sec], volume is 284614 [m^3],
+            max height is 9.4211 [m], max velocity is 37.899 [m/s],
+            ave velocity is 22.0712 [m/s], v* = 0.158828
+
+At the end of time step 299 the time is 0:00:7.81995 (hrs:min:sec),
+            time step length is 0.0238426 [sec], volume is 284613 [m^3],
+            max height is 9.34798 [m], max velocity is 37.9513 [m/s],
+            ave velocity is 22.1124 [m/s], v* = 0.159125
+
+At the end of time step 300 the time is 0:00:7.84484 (hrs:min:sec),
+            time step length is 0.0248905 [sec], volume is 284614 [m^3],
+            max height is 9.2877 [m], max velocity is 38.0266 [m/s],
+            ave velocity is 22.1531 [m/s], v* = 0.159418
+
+At the end of time step 301 the time is 0:00:7.86895 (hrs:min:sec),
+            time step length is 0.0241163 [sec], volume is 284614 [m^3],
+            max height is 9.24734 [m], max velocity is 38.095 [m/s],
+            ave velocity is 22.1939 [m/s], v* = 0.159711
+
+
+Titan2D performed 301 time steps before the calculation ended.
+0:00:7.86895 (hrs:min:sec) of time was simulated.
+the final v* = v/v_slump = 0.159711
+The maximum final velocity of 38.095 [m/s] 
+occured at the UTM coordinates (644759,2.15776e+06)
