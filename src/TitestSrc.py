@@ -1,6 +1,6 @@
 import os
 import logging as log
-
+from collections import OrderedDict
 from TitestCommon import run_command
 
 class TitestSrc:
@@ -93,3 +93,8 @@ class TitestGit(TitestSrc):
         self.run_autotools()
         
         os.chdir(old_wd)
+        
+        return OrderedDict([
+            ('passed',True),
+            ('message',"")
+        ])

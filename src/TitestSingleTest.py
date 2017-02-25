@@ -4,6 +4,7 @@ import logging as log
 import shutil
 import traceback
 import re
+import pprint
 
 from TitestCommon import titest_check_dir,run_command,get_cpu_instructions_sets,titest_cmd_timing_format
 from collections import OrderedDict
@@ -181,6 +182,18 @@ class TitestSingleTest:
         
     
     def run(self):
+        #check can this test be run
+        if self.threads>1 and self.cfg.openmp==False:
+            return OrderedDict([
+                ('passed',None),
+                ('message',"This is multi-thread test but titan2d compiled without openmp support")
+            ])
+        if self.mpi_procs!=None and self.mpi_procs>1 and self.cfg.mpi==False:
+            return OrderedDict([
+                ('passed',None),
+                ('message',"This is multi-MPI-processes test but titan2d compiled without MPI support")
+            ])
+        
         self.prolog()
         log.debug("run test directory: "+self.runtest_dir)
         self.results['passed']=False
@@ -210,6 +223,9 @@ class TitestSingleTest:
         if self.cfg.cleanup:
             self.cleanup()
         
+        os.chdir(self.runtest_dir)
+        with open("results","at") as fout:
+            fout.write(pprint.pformat(self.results,width=160)+",\n")
         self.epilog()
         return self.results
     
@@ -218,6 +234,7 @@ class TitestSingleTest:
 
 def run_single_test(cfg,testname):
     log.info("Running test: %s"%(testname,))
+    
     this_test_py=os.path.join(cfg.titan2d_tests_topdir,'tests',testname,"test.py")
     if not os.path.isfile(this_test_py):
         raise Exception("Script file for this test do not exists (%s)"%(this_test_py,))
@@ -236,8 +253,15 @@ def run_single_test(cfg,testname):
     os.chdir(run_all_tests_dir)
     
     this_test=this_test_py_vars['ThisTest'](cfg,testname)
-    results=this_test.run()
-    #TitestSingleTest(cfg,testname).run()
+    try:
+        results=this_test.run()
+    except Exception as e:
+            log.info("The test failed")
+            traceback.print_exc()
+            results=OrderedDict([
+                ('passed',False),
+                ('message',str(e))
+            ])
     
     os.chdir(old_wd)
     log.info("Done running test: %s"%(testname,))

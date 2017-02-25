@@ -2,6 +2,7 @@ import os
 import sys
 import inspect
 import logging as log
+import traceback
 from collections import OrderedDict
 
 titan2d_tests_src_directory=os.path.abspath(os.path.join(os.path.dirname(
@@ -21,8 +22,10 @@ import pprint
 class Titest:
     def __init__(self):
         self.cfg=TitestConfig()
+        self.src_results=None
         self.build_results=None
-    
+        self.tests_results=None
+        
     def check_top_test_dir(self):
         """check that top_test_dir is writable directory and create it if it does not exists and empty if needed"""
         if len(self.cfg.test_space_dir.split('/'))<=2:
@@ -61,9 +64,21 @@ class Titest:
         log.info("Obtaining Titan2d source code")
         
         if self.cfg.titan2d_src=="git":
-            TitestGit(self.cfg).get_src()
+            try:
+                src_getter=TitestGit(self.cfg)
+                return src_getter.get_src()
+            except Exception as e:
+                log.info("Source obtaining failed")
+                traceback.print_exc()
+                return OrderedDict([
+                    ('passed',False),
+                    ('message',str(e))
+                ])
         else:
-            raise Exception("Unknown way to get titan2d code: %s"%(str(self.cfg.titan2d_src),))
+            return OrderedDict([
+                ('passed',False),
+                ('message',"Unknown way to get titan2d code: %s"%(str(self.cfg.titan2d_src),))
+            ])
     
     def build(self):
         titest_build=TitestBuild(self.cfg)
@@ -106,9 +121,11 @@ class Titest:
             if repeats==1:
                 tests_results[testname]=run_single_test(self.cfg,testname)
             else:
-                tests_results[testname]=[]
+                repearitions=[]
                 for _ in range(repeats):
-                    tests_results[testname].append(run_single_test(self.cfg,testname))
+                    repearitions.append(run_single_test(self.cfg,testname))
+                tests_results[testname]=repearitions[-1]
+                tests_results[testname]['repearitions']=repearitions
                 
         log.info("Done running tests")
         return tests_results
@@ -124,20 +141,38 @@ class Titest:
         log.info("Changing working directory to test_space_dir(%s)"%(self.cfg.build_dir,))
         
         if self.cfg.run_src:
-            self.get_src()
+            self.src_results=self.get_src()
+            if self.src_results['passed']==False:
+                log.info("ERROR: Can not get titan2d sources! Source getter return:\n"+pprint.pformat(self.src_results,width=160))
+                return
             
         if self.cfg.run_build:
             self.build_results=self.build()
-        
+            if self.build_results['passed']==False:
+                log.info("ERROR: Can not build titan2d! Builder return:\n"+pprint.pformat(self.build_results,width=160))
+                return
         if self.cfg.run_tests:
             self.tests_results=self.run_tests()
         
         log.info("Done testing")
         log.info("Summary of results:")
+        msg=""
+        if self.cfg.run_src:
+            #log.info("Building:\n"+pprint.pformat(self.build_results,width=160))
+            msg+="Source obtaining\n\tPassed: "+str(self.src_results['passed'])+"\n"
         if self.cfg.run_build:
-            log.info("Building:\n"+pprint.pformat(self.build_results,width=160))
+            #log.info("Building:\n"+pprint.pformat(self.build_results,width=160))
+            msg+="Building\n\tPassed: "+str(self.build_results['passed'])+"\n"
         if self.cfg.run_tests:
-            log.info("Testing:\n"+pprint.pformat(self.tests_results,width=160))
+            
+            
+            for k,v in self.tests_results.items():
+                msg+=k+"\n"
+                msg+="\tPassed: "+str(v['passed'])
+                if v['passed']==False or v['passed']==None:
+                    msg+="\tmessage: "+str(v['message'])
+                msg+="\n"
+        log.info("Tests Results:\n"+msg)
         os.chdir(old_wd)
         
         

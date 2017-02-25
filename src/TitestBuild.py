@@ -1,7 +1,8 @@
 import os
 import logging as log
 from collections import OrderedDict
-
+import traceback
+import pprint
 from TitestCommon import run_command,titest_check_dir
 
 
@@ -12,16 +13,26 @@ class TitestBuild:
     def __init__(self, cfg):
         self.cfg=cfg
         
-        #specify was it complete build or incremental
-        self.complete_build=True
-        #time to run configure
-        self.configure_timing=None
-        #time to run make -j
-        self.make_timing=None
-        #time to run make -j install
-        self.make_install_timing=None
-        #was the titan binary made
-        self.successfull_build=None
+        self.successfull_build=False
+        #init results
+        self.results=OrderedDict([
+            #was the titan binary made
+            ('passed',None),
+            ('message',""),
+            #specify was it complete build or incremental
+            ('complete_build',None),
+            #configure command line
+            ('configure_command',None),
+            #time to run configure
+            ('configure_timing',None),
+             #time to run make -j
+            ('make_timing',None),
+            #time to run make -j install
+            ('make_install_timing',None),
+            #time to run make clean
+            ('make_clean_timing',None)       
+        ])
+        
         
     def check_build_dir(self, create=False):
         titest_check_dir(self.cfg.build_dir,create)
@@ -60,6 +71,7 @@ class TitestBuild:
         if self.cfg.redo_build==False:
             if os.path.exists(os.path.join(self.cfg.build_dir,'Makefile')):
                 log.info("Configure was ran before, would not run it now")
+                self.results['complete_build']=False
                 return
                 
         old_wd=os.getcwd()
@@ -71,12 +83,12 @@ class TitestBuild:
         configure=self.cfg.titan2d_src_dir+"/configure "
         configure+="--prefix="+self.cfg.install_dir
         configure+=" "+self._get_configure_flags()
-        
+        self.results['configure_command']=configure
         log.info('Configure command: '+configure)
         
         start = timer()
         run_command(configure+' >& configure.out',False)
-        self.configure_timing=timer()-start
+        self.results['configure_timing']=timer()-start
         
         if not os.path.exists(os.path.join(self.cfg.build_dir,'Makefile')):
             raise Exception("Can not configure")
@@ -90,7 +102,7 @@ class TitestBuild:
         
         start = timer()
         run_command('make -j >& make.log',False)
-        self.make_timing=timer()-start
+        self.results['make_timing']=timer()-start
         
         os.chdir(old_wd)
         
@@ -105,7 +117,7 @@ class TitestBuild:
         
         start = timer()
         run_command('make -j install >& make_install.log',False)
-        self.make_install_timing=timer()-start
+        self.results['make_install_timing']=timer()-start
                 
         os.chdir(old_wd)
         
@@ -121,34 +133,41 @@ class TitestBuild:
         
         start = timer()
         run_command('make -j clean >& make_clean.log',False)
-        self.make_install_timing=timer()-start
+        self.results['make_clean_timing']=timer()-start
                 
         os.chdir(old_wd)
     
         
     def build(self):
         log.info("Building Titan2d")
-        self.check_build_dir(create=True)
-        
         old_wd=os.getcwd()
-
-        self._configure()
+        try:
+            self.check_build_dir(create=True)
+    
+            self._configure()
+            
+            self._make()
+            
+            self._make_install()
+            
+            if self.cfg.cleanup:
+                self._cleanup()
+            
+            log.info("Done building")
+            
+            self.results['passed']=self.successfull_build
+            
+            os.chdir(self.cfg.build_dir)
+            with open("results","at") as fout:
+                fout.write(pprint.pformat(self.results,width=160)+",\n")
+        except Exception as e:
+            log.info("The build failed")
+            traceback.print_exc()
+            self.results['passed']=False
+            self.results['message']=str(e)
+        finally:
+            os.chdir(old_wd)
         
-        self._make()
         
-        self._make_install()
-        
-        if self.cfg.cleanup:
-            self._cleanup()
-        
-        log.info("Done building")
-        os.chdir(old_wd)
-        
-        return OrderedDict([
-            ('passed',self.successfull_build),
-            ('complete_build',self.complete_build),
-            ('configure_timing',self.configure_timing),
-            ('make_timing',self.make_timing),
-            ('make_install_timing',self.make_install_timing)            
-        ])
+        return self.results
 
