@@ -7,6 +7,7 @@ import re
 
 from TitestCommon import titest_check_dir,run_command,get_cpu_instructions_sets,titest_cmd_timing_format
 from collections import OrderedDict
+from compare_restart_hdf5 import compare_restart_hdf5
 from compare_visout_hdf5 import compare_vizout_hdf5
 from compare_maxpilehights import compare_maxpilehights
 
@@ -43,6 +44,9 @@ class TitestSingleTest:
             'failed'
             ]
         self.results=OrderedDict([("passed",None)])
+        
+        self.err_tolerance=3.0e-08
+        
         
     def prolog(self):
         self.old_wd=os.getcwd()
@@ -107,6 +111,7 @@ class TitestSingleTest:
         
         loc_ref_dir=os.path.join(self.runtest_dir,"ref")
         
+        restart_h5_to_comp=[]
         xdmf_h5_to_comp=[]
         maxkerecord_to_comp=[]
         pileheightrecord_to_comp=[]
@@ -114,22 +119,30 @@ class TitestSingleTest:
         for f in os.listdir(loc_ref_dir):
             if os.path.join(loc_ref_dir,f):
                 #see do we have vizout to compare
+                if re.match(r"snapshot_p\d+_i\d+\.h5", f):
+                    restart_h5_to_comp.append(f)
                 if re.match(r"xdmf_p\d+_i\d+\.h5", f):
                     xdmf_h5_to_comp.append(f)
                 if re.match(r"maxkerecord.[-0-9]+", f):
                     maxkerecord_to_comp.append(f)
                 if re.match(r"pileheightrecord.[-0-9]+", f):
                     pileheightrecord_to_comp.append(f)
+        restart_h5_to_comp=sorted(restart_h5_to_comp)
+        log.debug("restart_h5_to_comp: "+" ".join(restart_h5_to_comp))
+        for restart_h5 in restart_h5_to_comp:
+            restart_h5_name=restart_h5 if len(restart_h5_to_comp)>1 else "restart"
+            self.results[restart_h5_name]=compare_restart_hdf5(
+                os.path.join(self.runtest_dir,'restart',restart_h5),
+                os.path.join(loc_ref_dir,restart_h5)
+            )
         xdmf_h5_to_comp=sorted(xdmf_h5_to_comp)
         log.debug("xdmf_h5_to_comp: "+" ".join(xdmf_h5_to_comp))
-        
-        if binary_identical_test:
-            for xdmf_h5 in xdmf_h5_to_comp:
-                xdmf_h5_name=xdmf_h5 if len(xdmf_h5_to_comp)>1 else "visout"
-                self.results[xdmf_h5_name]=compare_vizout_hdf5(
-                    os.path.join(self.runtest_dir,'vizout',xdmf_h5),
-                    os.path.join(loc_ref_dir,xdmf_h5)
-                )
+        for xdmf_h5 in xdmf_h5_to_comp:
+            xdmf_h5_name=xdmf_h5 if len(xdmf_h5_to_comp)>1 else "visout"
+            self.results[xdmf_h5_name]=compare_vizout_hdf5(
+                os.path.join(self.runtest_dir,'vizout',xdmf_h5),
+                os.path.join(loc_ref_dir,xdmf_h5)
+            )
         log.debug("maxkerecord_to_comp: "+" ".join(maxkerecord_to_comp))
         for f in maxkerecord_to_comp:
             f_name=f if len(maxkerecord_to_comp)>1 else "maxkerecord"

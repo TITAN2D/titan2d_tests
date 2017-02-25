@@ -289,5 +289,6 @@ class TitestConfig:
         s+="\t which mpirun to use for mpi jobs: "+str(self.mpirun)+"\n"
         
         s+="   tests parameters\n"
+        s+="\t binary identical: "+str(self.binary_identical)+"\n"
         s+="\t tests: "+str(self.tests)+"\n"
         return s
