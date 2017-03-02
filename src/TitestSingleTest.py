@@ -34,6 +34,9 @@ class TitestSingleTest:
         self.ref_arch="std"
         if "fma" in get_cpu_instructions_sets():
             self.ref_arch="fma"
+            
+        #
+        self.should_have_same_elements=self.cfg.binary_identical
     
         #file to not remove during clean-up
         self.files_to_keep=[
@@ -44,8 +47,15 @@ class TitestSingleTest:
             'ref',
             'failed'
             ]
-        self.results=OrderedDict([("passed",None)])
         
+        #passing tests in restart file is critical for passing whole test
+        self.restart_is_critical=True
+        #passing tests in visout file is critical for passing whole test
+        self.visout_is_critical=True
+        #passing tests in outline file is critical for passing whole test
+        self.outline_is_critical=True
+        
+        #tolerance for error in restart file
         self.err_tolerance={
             'h':1.0e-08 if not self.cfg.binary_identical else 0.0,
             'hVx':1.0e-08 if not self.cfg.binary_identical else 0.0,
@@ -54,16 +64,21 @@ class TitestSingleTest:
             'max_pileheight':1.0e-08 if not self.cfg.binary_identical else 0.0
         }
         
+        #tolerance for error in visout (xdmf format) file
         self.err_visout_tolerance={
             'Pile_Height':1.0e-08,
             'XMomentum':1.0e-08,
             'YMomentum':1.0e-08
         }
         
+        #tolerance for error in outline
         self.err_outline_tolerance={
             'maxkerecord':1.0e-08,
             'maxpileheightrecord':1.0e-08
         }
+        
+        
+        self.results=OrderedDict([("passed",None)])
         
         
     def prolog(self):
@@ -84,8 +99,8 @@ class TitestSingleTest:
         if os.path.exists(os.path.join(self.runtest_dir,'input.py')):
             run_command('sed -i "s|LOCATION_OF_TITAN2D_TESTS|'+self.cfg.titan2d_tests_topdir+'|g" input.py')
     
-    def run_titan(self):
-        """run titan"""
+    def get_titan_command(self):
+        """get titan execution command, which includes mpirun with arguments, titan with -nt argument"""
         execution_command=""
         if self.mpi_procs!=None and self.mpi_procs>1:
             execution_command+=self.cfg.mpirun+" -n "+str(self.mpi_procs)+" "
@@ -94,12 +109,22 @@ class TitestSingleTest:
         
         if self.threads > 1:
             execution_command+=" -nt %d"%(self.threads,)
-        execution_command+=" input.py"
+        return execution_command
+        
+    def execute_titan_command(self,execution_command,output,timeout):
+        """execute titan command"""
+        run_cmd=titest_cmd_timing_format+' '+execution_command+" >& "+output
+        run_command(run_cmd,False,self.timeout)
+        
+    def run_titan(self):
+        """run titan"""
+        
+        execution_command=self.get_titan_command()+" input.py"
         
         log.debug("Running command: "+execution_command)
         
-        run_cmd=titest_cmd_timing_format+' '+execution_command+" >& run.out"
-        run_command(run_cmd,False,self.timeout)
+        self.execute_titan_command(execution_command,"run.out",self.timeout)
+        
         
     def read_timings(self):
         try:
@@ -176,7 +201,8 @@ class TitestSingleTest:
         
         #find did we pass the test
         passed=True
-        should_have_same_elements=self.cfg.binary_identical
+        self.results['passed']=passed
+        should_have_same_elements=self.should_have_same_elements
         
         for restart_filename,restart in self.results["restart"].items():
             for field in ['h','hVx','hVy','max_kinergy','max_pileheight']:
@@ -203,7 +229,7 @@ class TitestSingleTest:
                         else:
                             #didn't pass
                             this_test_passed=False
-                            message+="%s do not satisfy tollerance (%f > %f)\n"%(field,restart[field]['Err'],tolerance)
+                            message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+")\n"
                     else:
                         if should_have_same_elements:
                             this_test_passed=False
@@ -215,16 +241,22 @@ class TitestSingleTest:
                             else:
                                 #didn't pass
                                 this_test_passed=False
-                                message+="%s do not satisfy tollerance (%f > %f)\n"%(field,restart[field]['Err'],tolerance)
+                                message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+")\n"
                         else:
                             this_test_passed=None
                 
                 restart[field]['passed']=this_test_passed
-                if this_test_passed!=None:
+                if self.restart_is_critical and this_test_passed!=None:
                     passed=passed and this_test_passed
         
-        if len(self.results["restart"])>0:
-            self.results['passed']=passed
+        if self.restart_is_critical:
+            if len(self.results["restart"])>0:
+                self.results['passed']=passed
+            else:
+                self.results['passed']=False
+                message+="There is no restart files to compare, but restart_is_critical set to True.\n"
+        else:
+            passed=self.results['passed']
         
         for _,visout in self.results["visout"].items():
             try:
@@ -253,7 +285,8 @@ class TitestSingleTest:
                         else:
                             #didn't pass
                             this_test_passed=False
-            except Exception as e:
+                            message+=field+" in visout do not satisfy tollerance ("+str(visout[field+'_Err'])+" > "+str(tolerance)+")\n"
+            except Exception as _:
                 log.info("Something went wrong during visout analysis")
                 traceback.print_exc()
                 this_test_passed=False
@@ -262,11 +295,25 @@ class TitestSingleTest:
             visout['passed']=this_test_passed
             if visout['passed']!=None:
                 passed=passed and visout['passed']
-                    #if should_have_same_elements
         
+        if self.visout_is_critical:
+            if len(self.results["visout"])>0:
+                self.results['passed']=passed
+            else:
+                self.results['passed']=False
+                message+="There is no visout files to compare, but visout_is_critical set to True.\n"
+        else:
+            passed=self.results['passed']
+        
+        #check maxkerecord in outline
         for _,maxkerecord in self.results["maxkerecord"].items():
             try:
-                this_test_passed=maxkerecord['Err']<=self.err_outline_tolerance['maxkerecord']
+                if maxkerecord['Err']<=self.err_outline_tolerance['maxkerecord']:
+                    this_test_passed=True
+                else:
+                    this_test_passed=False
+                    message+="maxpileheightrecord in outline do not satisfy tollerance ("+str(maxkerecord['Err'])+" > "+\
+                        str(self.err_outline_tolerance['maxkerecord'])+")\n"
             except Exception as _:
                 log.info("Something went wrong during maxkerecord analysis")
                 traceback.print_exc()
@@ -276,10 +323,15 @@ class TitestSingleTest:
             maxkerecord['passed']=this_test_passed
             if maxkerecord['passed']!=None:
                 passed=passed and maxkerecord['passed']
-        
-        for _,maxpileheightrecord in self.results["maxkerecord"].items():
+        #check maxpileheightrecord in outline
+        for _,maxpileheightrecord in self.results["maxpileheightrecord"].items():
             try:
-                this_test_passed=maxpileheightrecord['Err']<=self.err_outline_tolerance['maxpileheightrecord']
+                if maxpileheightrecord['Err']<=self.err_outline_tolerance['maxpileheightrecord']:
+                    this_test_passed=True
+                else:
+                    this_test_passed=False
+                    message+="maxpileheightrecord in outline do not satisfy tollerance ("+str(maxpileheightrecord['Err'])+" > "+\
+                        str(self.err_outline_tolerance['maxpileheightrecord'])+")\n"
             except Exception as _:
                 log.info("Something went wrong during maxpileheightrecord analysis")
                 traceback.print_exc()
@@ -290,8 +342,14 @@ class TitestSingleTest:
             if maxpileheightrecord['passed']!=None:
                 passed=passed and maxpileheightrecord['passed']
         
-        if len(self.results["restart"])==0:
-            self.results['passed']=passed
+        if self.outline_is_critical:
+            if len(self.results["maxkerecord"])+len(self.results["maxpileheightrecord"])>0:
+                self.results['passed']=passed
+            else:
+                self.results['passed']=False
+                message+="There is no outline files to compare, but outline_is_critical set to True.\n"
+        else:
+            passed=self.results['passed']
         
         if message!=None:
             self.results['message']=message

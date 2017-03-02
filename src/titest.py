@@ -155,6 +155,17 @@ class Titest:
             self.tests_results=self.run_tests()
         
         log.info("Done testing")
+        
+        with open("results","at") as fout:
+
+            fout.write(pprint.pformat(
+                OrderedDict([
+                    ('src_results',self.src_results)
+                    ('build_results',self.build_results)
+                    ('tests_results',self.tests_results)
+                ])
+                ,width=160)+",\n")
+        
         log.info("Summary of results:")
         msg=""
         if self.cfg.run_src:
@@ -170,7 +181,14 @@ class Titest:
                 msg+=k+"\n"
                 msg+="\tPassed: "+str(v['passed'])
                 if v['passed']==False or v['passed']==None:
-                    msg+="\tmessage: "+str(v['message'])
+                    msg+="\tmessage: "
+                    lines=str(v['message']).splitlines(keepends=True)
+                    if len(lines)==1:
+                        msg+=lines[0]
+                    else:
+                        msg+="\n"
+                        for l in lines:
+                            msg+="\t\t"+l
                 msg+="\n"
         log.info("Tests Results:\n"+msg)
         os.chdir(old_wd)
