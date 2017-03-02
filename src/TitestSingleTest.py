@@ -46,7 +46,24 @@ class TitestSingleTest:
             ]
         self.results=OrderedDict([("passed",None)])
         
-        self.err_tolerance=3.0e-08
+        self.err_tolerance={
+            'h':1.0e-08 if not self.cfg.binary_identical else 0.0,
+            'hVx':1.0e-08 if not self.cfg.binary_identical else 0.0,
+            'hVy':1.0e-08 if not self.cfg.binary_identical else 0.0,
+            'max_kinergy':1.0e-08 if not self.cfg.binary_identical else 0.0,
+            'max_pileheight':1.0e-08 if not self.cfg.binary_identical else 0.0
+        }
+        
+        self.err_visout_tolerance={
+            'Pile_Height':1.0e-08,
+            'XMomentum':1.0e-08,
+            'YMomentum':1.0e-08
+        }
+        
+        self.err_outline_tolerance={
+            'maxkerecord':1.0e-08,
+            'maxpileheightrecord':1.0e-08
+        }
         
         
     def prolog(self):
@@ -106,16 +123,13 @@ class TitestSingleTest:
         
     def analyze_results(self):
         """analyze the results of titan run"""
-        binary_identical_test=False
-        if self.cfg.binary_identical:
-            binary_identical_test=True
-        
         loc_ref_dir=os.path.join(self.runtest_dir,"ref")
         
         restart_h5_to_comp=[]
         xdmf_h5_to_comp=[]
         maxkerecord_to_comp=[]
         pileheightrecord_to_comp=[]
+        message=""
         #find what we can to compare
         for f in os.listdir(loc_ref_dir):
             if os.path.join(loc_ref_dir,f):
@@ -130,40 +144,157 @@ class TitestSingleTest:
                     pileheightrecord_to_comp.append(f)
         restart_h5_to_comp=sorted(restart_h5_to_comp)
         log.debug("restart_h5_to_comp: "+" ".join(restart_h5_to_comp))
+        self.results["restart"]=OrderedDict()
         for restart_h5 in restart_h5_to_comp:
-            restart_h5_name=restart_h5 if len(restart_h5_to_comp)>1 else "restart"
-            self.results[restart_h5_name]=compare_restart_hdf5(
+            self.results["restart"][restart_h5]=compare_restart_hdf5(
                 os.path.join(self.runtest_dir,'restart',restart_h5),
                 os.path.join(loc_ref_dir,restart_h5)
             )
+            
         xdmf_h5_to_comp=sorted(xdmf_h5_to_comp)
         log.debug("xdmf_h5_to_comp: "+" ".join(xdmf_h5_to_comp))
+        self.results["visout"]=OrderedDict()
         for xdmf_h5 in xdmf_h5_to_comp:
-            xdmf_h5_name=xdmf_h5 if len(xdmf_h5_to_comp)>1 else "visout"
-            self.results[xdmf_h5_name]=compare_vizout_hdf5(
+            self.results["visout"][xdmf_h5]=compare_vizout_hdf5(
                 os.path.join(self.runtest_dir,'vizout',xdmf_h5),
                 os.path.join(loc_ref_dir,xdmf_h5)
             )
         log.debug("maxkerecord_to_comp: "+" ".join(maxkerecord_to_comp))
+        self.results["maxkerecord"]=OrderedDict()
         for f in maxkerecord_to_comp:
-            f_name=f if len(maxkerecord_to_comp)>1 else "maxkerecord"
-            self.results[f_name]=compare_maxpilehights(
+            self.results["maxkerecord"][f]=compare_maxpilehights(
                     os.path.join(self.runtest_dir,f),
                     os.path.join(loc_ref_dir,f)
                 )
         log.debug("pileheightrecord_to_comp: "+" ".join(pileheightrecord_to_comp))
+        self.results["maxpileheightrecord"]=OrderedDict()
         for f in pileheightrecord_to_comp:
-            f_name=f if len(pileheightrecord_to_comp)>1 else "pileheightrecord"
-            self.results[f_name]=compare_maxpilehights(
+            self.results["maxpileheightrecord"][f]=compare_maxpilehights(
                     os.path.join(self.runtest_dir,f),
                     os.path.join(loc_ref_dir,f)
                 )
+        
         #find did we pass the test
         passed=True
-        self.results['passed']=passed
+        should_have_same_elements=self.cfg.binary_identical
         
+        for restart_filename,restart in self.results["restart"].items():
+            for field in ['h','hVx','hVy','max_kinergy','max_pileheight']:
+                this_test_passed=None
+                tolerance=self.err_tolerance[field]
+                
+                if field not in restart:
+                    this_test_passed=False
+                    message+="Field %s is not present in restart file (%s) analysis output\n"%(field,restart_filename,)
+                    
+                if this_test_passed!=False and 'Comparable' not in restart[field]:
+                    this_test_passed=False
+                    message+="Field Comparable is not present in restart file (%s) analysis output\n"%(restart_filename,)
+                
+                if this_test_passed!=False and 'Err' not in restart[field]:
+                    this_test_passed=False
+                    message+="Field Err is not present in restart file (%s) analysis output\n"%(restart_filename,)
+                
+                if this_test_passed!=False:
+                    if restart[field]['Comparable']:
+                        if restart[field]['Err']<=tolerance:
+                            #passed
+                            this_test_passed=True
+                        else:
+                            #didn't pass
+                            this_test_passed=False
+                            message+="%s do not satisfy tollerance (%f > %f)\n"%(field,restart[field]['Err'],tolerance)
+                    else:
+                        if should_have_same_elements:
+                            this_test_passed=False
+                        elif field in ['max_kinergy','max_pileheight']:
+                            #if should_have_same_elements==False and field is outline
+                            if restart[field]['Err']<=tolerance:
+                                #passed
+                                this_test_passed=True
+                            else:
+                                #didn't pass
+                                this_test_passed=False
+                                message+="%s do not satisfy tollerance (%f > %f)\n"%(field,restart[field]['Err'],tolerance)
+                        else:
+                            this_test_passed=None
+                
+                restart[field]['passed']=this_test_passed
+                if this_test_passed!=None:
+                    passed=passed and this_test_passed
         
+        if len(self.results["restart"])>0:
+            self.results['passed']=passed
+        
+        for _,visout in self.results["visout"].items():
+            try:
+                Comparable=True
+                if not ('ElementsNumberIsSame' in visout and visout['ElementsNumberIsSame']):
+                    Comparable=False
+                if not ('PointsNumberIsSame' in visout and visout['PointsNumberIsSame']):
+                    Comparable=False
+                if not ('PointsRMSD' in visout and visout['PointsRMSD']==0.0):
+                    Comparable=False
+                if not ('ConnectionsIsSame' in visout and visout['ConnectionsIsSame']):
+                    Comparable=False
+                
+                this_test_passed=None
+                if Comparable==False:
+                    if should_have_same_elements:
+                        this_test_passed=False
+                    else:
+                        this_test_passed=None
+                else:
+                    for field in ['Pile_Height','XMomentum','YMomentum']:
+                        tolerance=self.err_visout_tolerance[field]
+                        if visout[field+'_Err']<=tolerance:
+                            #passed
+                            this_test_passed=True
+                        else:
+                            #didn't pass
+                            this_test_passed=False
+            except Exception as e:
+                log.info("Something went wrong during visout analysis")
+                traceback.print_exc()
+                this_test_passed=False
+                message+="Something went wrong during visout analysis\n"
             
+            visout['passed']=this_test_passed
+            if visout['passed']!=None:
+                passed=passed and visout['passed']
+                    #if should_have_same_elements
+        
+        for _,maxkerecord in self.results["maxkerecord"].items():
+            try:
+                this_test_passed=maxkerecord['Err']<=self.err_outline_tolerance['maxkerecord']
+            except Exception as _:
+                log.info("Something went wrong during maxkerecord analysis")
+                traceback.print_exc()
+                this_test_passed=False
+                message+="Something went wrong during maxkerecord analysis\n"
+            
+            maxkerecord['passed']=this_test_passed
+            if maxkerecord['passed']!=None:
+                passed=passed and maxkerecord['passed']
+        
+        for _,maxpileheightrecord in self.results["maxkerecord"].items():
+            try:
+                this_test_passed=maxpileheightrecord['Err']<=self.err_outline_tolerance['maxpileheightrecord']
+            except Exception as _:
+                log.info("Something went wrong during maxpileheightrecord analysis")
+                traceback.print_exc()
+                this_test_passed=False
+                message+="Something went wrong during maxpileheightrecord analysis\n"
+            
+            maxpileheightrecord['passed']=this_test_passed
+            if maxpileheightrecord['passed']!=None:
+                passed=passed and maxpileheightrecord['passed']
+        
+        if len(self.results["restart"])==0:
+            self.results['passed']=passed
+        
+        if message!=None:
+            self.results['message']=message
     
     def cleanup(self):
         """remove most of files from titan run, should be called in case of successfull test"""

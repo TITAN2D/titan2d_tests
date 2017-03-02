@@ -48,6 +48,8 @@ class TiRestartH5:
 def compare_arrays(a1,a2):
     r=OrderedDict()
     r['Comparable']=a1.shape[0]==a2.shape[0]
+    r['passed']=None
+    r['message']=None
     r['Err']=None
     r['ErrMax']=None
     if not r['Comparable']:

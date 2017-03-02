@@ -92,6 +92,12 @@ def compare_vizout_hdf5(filename1,filename2,verbose=False):
             m_dmax=m_max1-m_max2
             m_dmean=m_mean1-m_mean2
             
+            b_denom=numpy.ma.masked_equal((numpy.fabs(ds1)+numpy.fabs(ds2))*0.5,0.0)
+            b_nom=numpy.ma.MaskedArray(numpy.fabs(ds1-ds2),mask=b_denom.mask)
+            b=b_nom.compressed()/b_denom.compressed()
+            r[propname+'_Err']=b.mean()
+            r[propname+'_ErrMax']=b.max()
+            
             r[propname+'_relRMSD_NonZero']=m_rmsd/m_mean if m_mean!=0.0 else None
             r[propname+'_relMeanDiff_NonZero']=m_dmean/m_mean if m_mean!=0.0 else None
             r[propname+'_relMaxDiff']=m_dmax/m_mean if m_mean!=0.0 else None
@@ -147,6 +153,12 @@ def compare_vizout_hdf5(filename1,filename2,verbose=False):
             m_max2=ds2.max()
             m_dmax=m_max1-m_max2
             m_dmean=m_mean1-m_mean2
+            
+            b_denom=numpy.ma.masked_equal((numpy.fabs(ds1)+numpy.fabs(ds2))*0.5,0.0)
+            b_nom=numpy.ma.MaskedArray(numpy.fabs(ds1-ds2),mask=b_denom.mask)
+            b=b_nom.compressed()/b_denom.compressed()
+            r[propname+'_Err']=b.mean()
+            r[propname+'_ErrMax']=b.max()
             
             r[propname+'_relRMSD_NonZero']=m_rmsd/m_mean if m_mean!=0.0 else None
             r[propname+'_relMeanDiff_NonZero']=m_dmean/m_mean if m_mean!=0.0 else None

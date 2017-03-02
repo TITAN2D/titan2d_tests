@@ -33,7 +33,13 @@ def compare_maxpilehights(filename,filename_ref):
     hmin=numpy.min(h)
     hmean=numpy.mean(h)
     
+    b_denom=numpy.ma.masked_equal((numpy.fabs(h)+numpy.fabs(h_ref))*0.5,0.0)
+    b_nom=numpy.ma.MaskedArray(numpy.fabs(h-h_ref),mask=b_denom.mask)
+    b=b_nom.compressed()/b_denom.compressed()
+    
     return OrderedDict([
+        ("Err",b.mean()),
+        ("ErrMax",b.max()),
         ("RMSD",rmsd),
         ("RelRMSD",rmsd/hmean if hmean!=0.0 else None),
         ("Mean",hmean),
