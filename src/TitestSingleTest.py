@@ -57,24 +57,24 @@ class TitestSingleTest:
         
         #tolerance for error in restart file
         self.err_tolerance={
-            'h':1.0e-08 if not self.cfg.binary_identical else 0.0,
-            'hVx':1.0e-08 if not self.cfg.binary_identical else 0.0,
-            'hVy':1.0e-08 if not self.cfg.binary_identical else 0.0,
-            'max_kinergy':1.0e-08 if not self.cfg.binary_identical else 0.0,
-            'max_pileheight':1.0e-08 if not self.cfg.binary_identical else 0.0
+            'h':3.0e-08 if not self.cfg.binary_identical else 0.0,
+            'hVx':3.0e-08 if not self.cfg.binary_identical else 0.0,
+            'hVy':3.0e-08 if not self.cfg.binary_identical else 0.0,
+            'max_kinergy':3.0e-08 if not self.cfg.binary_identical else 0.0,
+            'max_pileheight':3.0e-08 if not self.cfg.binary_identical else 0.0
         }
         
         #tolerance for error in visout (xdmf format) file
         self.err_visout_tolerance={
-            'Pile_Height':1.0e-08,
-            'XMomentum':1.0e-08,
-            'YMomentum':1.0e-08
+            'Pile_Height':3.0e-08,
+            'XMomentum':3.0e-08,
+            'YMomentum':3.0e-08
         }
         
         #tolerance for error in outline
         self.err_outline_tolerance={
-            'maxkerecord':1.0e-08,
-            'maxpileheightrecord':1.0e-08
+            'maxkerecord':3.0e-08,
+            'maxpileheightrecord':3.0e-08
         }
         
         
@@ -229,7 +229,7 @@ class TitestSingleTest:
                         else:
                             #didn't pass
                             this_test_passed=False
-                            message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+")\n"
+                            message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+") in "+restart_filename+"\n"
                     else:
                         if should_have_same_elements:
                             this_test_passed=False
@@ -241,11 +241,13 @@ class TitestSingleTest:
                             else:
                                 #didn't pass
                                 this_test_passed=False
-                                message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+")\n"
+                                message+=field+" do not satisfy tollerance ("+str(restart[field]['Err'])+" > "+str(tolerance)+") in "+restart_filename+"\n"
                         else:
                             this_test_passed=None
-                
-                restart[field]['passed']=this_test_passed
+                if field in restart:
+                    restart[field]['passed']=this_test_passed
+                else:
+                    passed=False
                 if self.restart_is_critical and this_test_passed!=None:
                     passed=passed and this_test_passed
         
@@ -258,7 +260,7 @@ class TitestSingleTest:
         else:
             passed=self.results['passed']
         
-        for _,visout in self.results["visout"].items():
+        for visout_filename,visout in self.results["visout"].items():
             try:
                 Comparable=True
                 if not ('ElementsNumberIsSame' in visout and visout['ElementsNumberIsSame']):
@@ -285,7 +287,7 @@ class TitestSingleTest:
                         else:
                             #didn't pass
                             this_test_passed=False
-                            message+=field+" in visout do not satisfy tollerance ("+str(visout[field+'_Err'])+" > "+str(tolerance)+")\n"
+                            message+=field+" in visout do not satisfy tollerance ("+str(visout[field+'_Err'])+" > "+str(tolerance)+") in "+visout_filename+"\n"
             except Exception as _:
                 log.info("Something went wrong during visout analysis")
                 traceback.print_exc()
@@ -306,14 +308,14 @@ class TitestSingleTest:
             passed=self.results['passed']
         
         #check maxkerecord in outline
-        for _,maxkerecord in self.results["maxkerecord"].items():
+        for maxkerecord_filename,maxkerecord in self.results["maxkerecord"].items():
             try:
                 if maxkerecord['Err']<=self.err_outline_tolerance['maxkerecord']:
                     this_test_passed=True
                 else:
                     this_test_passed=False
                     message+="maxpileheightrecord in outline do not satisfy tollerance ("+str(maxkerecord['Err'])+" > "+\
-                        str(self.err_outline_tolerance['maxkerecord'])+")\n"
+                        str(self.err_outline_tolerance['maxkerecord'])+") in "+maxkerecord_filename+"\n"
             except Exception as _:
                 log.info("Something went wrong during maxkerecord analysis")
                 traceback.print_exc()
@@ -324,14 +326,14 @@ class TitestSingleTest:
             if maxkerecord['passed']!=None:
                 passed=passed and maxkerecord['passed']
         #check maxpileheightrecord in outline
-        for _,maxpileheightrecord in self.results["maxpileheightrecord"].items():
+        for maxpileheightrecord_filename,maxpileheightrecord in self.results["maxpileheightrecord"].items():
             try:
                 if maxpileheightrecord['Err']<=self.err_outline_tolerance['maxpileheightrecord']:
                     this_test_passed=True
                 else:
                     this_test_passed=False
                     message+="maxpileheightrecord in outline do not satisfy tollerance ("+str(maxpileheightrecord['Err'])+" > "+\
-                        str(self.err_outline_tolerance['maxpileheightrecord'])+")\n"
+                        str(self.err_outline_tolerance['maxpileheightrecord'])+") in "+maxpileheightrecord_filename+"\n"
             except Exception as _:
                 log.info("Something went wrong during maxpileheightrecord analysis")
                 traceback.print_exc()
