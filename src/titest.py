@@ -156,12 +156,12 @@ class Titest:
         
         log.info("Done testing")
         
-        with open("results","at") as fout:
+        with open(os.path.join(self.cfg.test_space_dir,"results"),"at") as fout:
 
             fout.write(pprint.pformat(
                 OrderedDict([
-                    ('src_results',self.src_results)
-                    ('build_results',self.build_results)
+                    ('src_results',self.src_results),
+                    ('build_results',self.build_results),
                     ('tests_results',self.tests_results)
                 ])
                 ,width=160)+",\n")
