@@ -88,7 +88,7 @@ class TitestGit(TitestSrc):
         old_wd=os.getcwd()
         
         self.check_local_git_repo(redo_git=False)
-        self.checkout("master",pull=True)
+        self.checkout(self.cfg.commit,pull=False)
         
         self.run_autotools()
         

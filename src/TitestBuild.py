@@ -48,8 +48,9 @@ class TitestBuild:
             flags+=" --enable-openmp"
         if cfg.mpi:
             flags+=" --enable-mpi"
-            
-        flags+=" --disable-java-gui"
+
+        if cfg.disable_java_gui:
+            flags+=" --disable-java-gui"
         
         if cfg.cxx:
             flags+=" CXX="+cfg.cxx

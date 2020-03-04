@@ -45,6 +45,7 @@ class TitestConfig:
         
         #source parameters
         self.titan2d_src="git"
+        self.commit="master"
         
         #building parameters
         #run autotools 
@@ -63,6 +64,7 @@ class TitestConfig:
         self.mpi=False
         #compile with debug flags
         self.debug=False
+        self.disable_java_gui=False
         
         #titan2d dependencies
         #gdal top directory
@@ -111,6 +113,7 @@ class TitestConfig:
         
         #source parameters
         self.titan2d_src=args.src
+        self.commit=args.commit
         if isinstance(self.titan2d_src, str) and self.titan2d_src.lower()=="none":
             self.titan2d_src=None
         if self.titan2d_src!=None and self.titan2d_src!="git":
@@ -136,6 +139,7 @@ class TitestConfig:
         self.openmp=args.openmp
         self.mpi=args.mpi
         self.debug=args.debug
+        self.disable_java_gui=args.disable_java_gui
         
         #titan2d dependencies
         self.gdal=args.gdal
@@ -195,6 +199,9 @@ class TitestConfig:
         #source parameters
         parser.add_argument('-src', '--src', required=False, type=str, default='git',
             help="where to get titan2d sources if it is git will get it from git")
+
+        parser.add_argument('-commit', '--commit', required=False, type=str, default='master',
+                            help="commit to check")
         
         #building parameters
         parser.add_argument('--no-run-autotools', action='store_true', default=False,
@@ -213,6 +220,7 @@ class TitestConfig:
             help="compile with mpi support")
         parser.add_argument('-debug', '--debug', action='store_true', 
             help="compile with debug flags")
+        parser.add_argument('--disable-java-gui', action='store_true', help="Do not compile java GUI")
         
         #titan2d dependencies
         parser.add_argument('-hdf5', '--hdf5',  required=False, default=None,
