@@ -197,8 +197,10 @@ class Titest:
                 msg+="\n"
         log.info("Tests Results:\n"+msg)
         os.chdir(old_wd)
+        log.info("Passed: " + str(passed_overall))
         return passed_overall
         
 
 if __name__ == '__main__':
-    exit(int(Titest().run_from_cmdline()))
+    status=int(not Titest().run_from_cmdline())
+    exit(status)
