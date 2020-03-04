@@ -153,6 +153,7 @@ class TitestConfig:
         #tests parameters
         self.binary_identical=args.binary_identical
         self.tests=args.tests
+        self.reference=args.reference
         
         if self.titan_bin:
             #the titan binary is provide, so dont build it
