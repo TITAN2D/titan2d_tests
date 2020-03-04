@@ -5,6 +5,8 @@ Titan2d 4.1.0
 Executable location: /root/titan2d_wsp/titan2d_dotests/gcc_openmp/titan2d/bin/titan
 -------------------------------------------------------------------------------
 
+Max threads number is 6
+
 
 preproc...
 The GIS region is:  x = 6.415000e+05 to 6.460000e+05   y = 2.154500e+06 to 2.159000e+06.
@@ -42,7 +44,7 @@ Material properties:
 	Bed friction:
 		1 all materials 27.000000
 Outline init: Nx=1024 Ny=1024 dx=3.5332 dy=3.5332
-Outline init: temporary arrays for 1 threads
+Outline init: temporary arrays for 6 threads
 # deleted_nodes=0, deleted_elements=0
 bed friction angle for "all materials" is 27
 internal friction angle is 37, epsilon is 0.016454 
@@ -1456,24 +1458,24 @@ At the end of time step 200 the time is 0:00:5.45303 (hrs:min:sec),
 	xyminmax 6.447339971e+05 6.450661182e+05 2.157744597e+06 2.158104983e+06
 
 Timings over last 200 steps (seconds):
-  Total execution time:...................      1.084
-    Mesh adaptation time:.................      0.473 (43.62 %)
-      Refinement time:....................      0.277 (25.56 %, 58.60 %)
-        elementWeightCalc:................      0.022 ( 2.02 %,  7.89 %)
-        seedRefinementsSearch:............      0.029 ( 2.63 %, 10.30 %)
-        triggeredRefinementsSearch:.......      0.004 ( 0.41 %,  1.60 %)
-        refineElements:...................      0.155 (14.29 %, 32.75 %)
-        refinedElementsNeigboursUpdate:...      0.019 ( 1.73 %,  6.77 %)
-        refinementsPostProc:..............      0.008 ( 0.77 %,  3.02 %)
-      Unrefinement time:..................      0.055 ( 5.07 %, 11.63 %)
-    Step time:............................      0.567 (52.29 %)
-      Predictor time:.....................      0.006 ( 0.55 %,  1.06 %)
-      Corrector time:.....................      0.065 ( 6.01 %, 11.50 %)
-      Outline time:.......................      0.150 (13.82 %, 26.43 %)
-      Slope Calc. time:...................      0.063 ( 5.82 %, 11.13 %)
-    Results dump time:....................      0.027 ( 2.48 %)
-    Flush ElemTable time:.................      0.054 ( 4.96 %)
-    Flush NodeTable time:.................      0.080 ( 7.37 %)
+  Total execution time:...................      0.783
+    Mesh adaptation time:.................      0.402 (51.35 %)
+      Refinement time:....................      0.223 (28.53 %, 55.55 %)
+        elementWeightCalc:................      0.021 ( 2.66 %,  9.32 %)
+        seedRefinementsSearch:............      0.014 ( 1.80 %,  6.31 %)
+        triggeredRefinementsSearch:.......      0.004 ( 0.53 %,  1.85 %)
+        refineElements:...................      0.135 (17.21 %, 33.52 %)
+        refinedElementsNeigboursUpdate:...      0.017 ( 2.17 %,  7.60 %)
+        refinementsPostProc:..............      0.005 ( 0.60 %,  2.11 %)
+      Unrefinement time:..................      0.036 ( 4.59 %,  8.95 %)
+    Step time:............................      0.339 (43.32 %)
+      Predictor time:.....................      0.006 ( 0.82 %,  1.90 %)
+      Corrector time:.....................      0.020 ( 2.62 %,  6.04 %)
+      Outline time:.......................      0.126 (16.07 %, 37.11 %)
+      Slope Calc. time:...................      0.018 ( 2.28 %,  5.26 %)
+    Results dump time:....................      0.027 ( 3.49 %)
+    Flush ElemTable time:.................      0.062 ( 7.91 %)
+    Flush NodeTable time:.................      0.077 ( 9.86 %)
 
 At the end of time step 201 the time is 0:00:5.47782 (hrs:min:sec),
 	time step length is 0.0247872 [sec], volume is 284630 [m^3],
@@ -2190,100 +2192,100 @@ The maximum final velocity of 38.4033 [m/s]
 occured at the UTM coordinates (644759,2.15776e+06)
 
 Titan timings, seconds:
-  Total execution time:...................      4.002
-    Mesh adaptation time:.................      0.838 (20.93 %)
-      Refinement time:....................      0.488 (12.20 %, 58.29 %)
-        elementWeightCalc:................      0.036 ( 0.90 %,  7.40 %)
-        seedRefinementsSearch:............      0.054 ( 1.36 %, 11.13 %)
-        triggeredRefinementsSearch:.......      0.010 ( 0.25 %,  2.02 %)
-        refineElements:...................      0.278 ( 6.94 %, 33.17 %)
-        refinedElementsNeigboursUpdate:...      0.034 ( 0.84 %,  6.91 %)
-        refinementsPostProc:..............      0.016 ( 0.41 %,  3.34 %)
-      Unrefinement time:..................      0.113 ( 2.83 %, 13.55 %)
-    Step time:............................      1.026 (25.64 %)
-      Predictor time:.....................      0.011 ( 0.28 %,  1.08 %)
-      Corrector time:.....................      0.137 ( 3.41 %, 13.31 %)
-      Outline time:.......................      0.231 ( 5.76 %, 22.47 %)
-      Slope Calc. time:...................      0.126 ( 3.16 %, 12.31 %)
-    Results dump time:....................      0.044 ( 1.09 %)
-    Flush ElemTable time:.................      0.094 ( 2.35 %)
-    Flush NodeTable time:.................      0.127 ( 3.18 %)
+  Total execution time:...................      3.523
+    Mesh adaptation time:.................      0.667 (18.95 %)
+      Refinement time:....................      0.363 (10.31 %, 54.43 %)
+        elementWeightCalc:................      0.035 ( 1.00 %,  9.70 %)
+        seedRefinementsSearch:............      0.025 ( 0.71 %,  6.92 %)
+        triggeredRefinementsSearch:.......      0.010 ( 0.28 %,  2.73 %)
+        refineElements:...................      0.221 ( 6.29 %, 33.17 %)
+        refinedElementsNeigboursUpdate:...      0.029 ( 0.83 %,  8.03 %)
+        refinementsPostProc:..............      0.009 ( 0.26 %,  2.54 %)
+      Unrefinement time:..................      0.072 ( 2.06 %, 10.86 %)
+    Step time:............................      0.552 (15.66 %)
+      Predictor time:.....................      0.011 ( 0.32 %,  2.06 %)
+      Corrector time:.....................      0.039 ( 1.11 %,  7.10 %)
+      Outline time:.......................      0.194 ( 5.52 %, 35.23 %)
+      Slope Calc. time:...................      0.036 ( 1.02 %,  6.50 %)
+    Results dump time:....................      0.044 ( 1.26 %)
+    Flush ElemTable time:.................      0.100 ( 2.84 %)
+    Flush NodeTable time:.................      0.123 ( 3.49 %)
 
 
 Titan profiling, cycles, miliseconds:
-  tsim_iter 1927716300 1927.72
-  tsim_iter_update_topo 2651200 2.6512
-  tsim_iter_adapt 832300000 832.3
-  tsim_iter_step 1029955500 1029.96
-  tsim_iter_saverestart 4028100 4.0281
-  tsim_iter_output 34091300 34.0913
-  tsim_iter_post 6111700 6.1117
-  PrimaryRefinementsFinder_findSeedRefinements_loop 5687600 5.6876
-  PrimaryRefinementsFinder_findSeedRefinements_merge 471900 0.4719
-  BuferFirstLayerRefinementsFinder_findSeedRefinements_loop 18572400 18.5724
-  BuferFirstLayerRefinementsFinder_findSeedRefinements_merge 358900 0.3589
-  BuferNextLayerRefinementsFinder_findSeedRefinements_loop 18484600 18.4846
-  BuferNextLayerRefinementsFinder_findSeedRefinements_merge 1551600 1.5516
-  HAdapt_adapt_prolog 1626200 1.6262
-  HAdapt_adapt_element_weight 36849700 36.8497
-  HAdapt_adapt_reset_adapt 955700 0.9557
-  HAdapt_adapt_allrefine 388272400 388.272
-  HAdapt_adapt_allrefine_buffer_handling 35732100 35.7321
-  HAdapt_adapt_htflush2 357100 0.3571
+  tsim_iter 1279557600 1279.56
+  tsim_iter_update_topo 1825800 1.8258
+  tsim_iter_adapt 663803800 663.804
+  tsim_iter_step 555213700 555.214
+  tsim_iter_saverestart 3603400 3.6034
+  tsim_iter_output 35267800 35.2678
+  tsim_iter_post 5670900 5.6709
+  PrimaryRefinementsFinder_findSeedRefinements_loop 2799100 2.7991
+  PrimaryRefinementsFinder_findSeedRefinements_merge 464900 0.4649
+  BuferFirstLayerRefinementsFinder_findSeedRefinements_loop 3707500 3.7075
+  BuferFirstLayerRefinementsFinder_findSeedRefinements_merge 485600 0.4856
+  BuferNextLayerRefinementsFinder_findSeedRefinements_loop 6510700 6.5107
+  BuferNextLayerRefinementsFinder_findSeedRefinements_merge 1627100 1.6271
+  HAdapt_adapt_prolog 1047400 1.0474
+  HAdapt_adapt_element_weight 36064200 36.0642
+  HAdapt_adapt_reset_adapt 1061600 1.0616
+  HAdapt_adapt_allrefine 298427200 298.427
+  HAdapt_adapt_allrefine_buffer_handling 9822200 9.8222
+  HAdapt_adapt_htflush2 411000 0.411
   HAdapt_adapt_remove_elements 0 0
-  HAdapt_adapt_epilog 15607900 15.6079
-  step_other 18481800 18.4818
-  step_slopesCalc 133917400 133.917
-  step_get_coef_and_eigen 107338000 107.338
-  step_adapt_fluxsrc_region 6197700 6.1977
-  step_predict 1795400 1.7954
+  HAdapt_adapt_epilog 8386600 8.3866
+  step_other 19198200 19.1982
+  step_slopesCalc 43527600 43.5276
+  step_get_coef_and_eigen 26261500 26.2615
+  step_adapt_fluxsrc_region 4865500 4.8655
+  step_predict 2021500 2.0215
   step_apply_bc 0 0
-  step_corrector 134717500 134.718
-  step_calc_edge_states 244092100 244.092
-  step_outline 246123600 246.124
-  step_calc_wet_dry_orient 28426800 28.4268
-  step_calc_stats 77334900 77.3349
+  step_corrector 37295300 37.2953
+  step_calc_edge_states 52690400 52.6904
+  step_outline 233419700 233.42
+  step_calc_wet_dry_orient 29814500 29.8145
+  step_calc_stats 99763200 99.7632
   HAdapt_refineElements_other 0 0
-  HAdapt_refineElements_init 4961500 4.9615
-  HAdapt_refineElements_find_corners_sides_bubbles 2521500 2.5215
-  HAdapt_refineElements_side0_find_nodes 8433900 8.4339
-  HAdapt_refineElements_side0_add_new_nodes 2350900 2.3509
-  HAdapt_refineElements_side1_find_nodes 7669900 7.6699
-  HAdapt_refineElements_side1_add_new_nodes 10678300 10.6783
-  HAdapt_refineElements_side2_find_nodes 7458500 7.4585
-  HAdapt_refineElements_side2_add_new_nodes 2309900 2.3099
-  HAdapt_refineElements_side3_find_nodes 8003400 8.0034
-  HAdapt_refineElements_side3_add_new_nodes 2139000 2.139
-  HAdapt_refineElements_int_nodes_calc_keys 27697200 27.6972
-  HAdapt_refineElements_int_nodes_alloc 24909200 24.9092
-  HAdapt_refineElements_side0_init 4114700 4.1147
-  HAdapt_refineElements_side1_init 3507700 3.5077
-  HAdapt_refineElements_side2_init 3058000 3.058
-  HAdapt_refineElements_side3_init 3072300 3.0723
-  HAdapt_refineElements_int_nodes_init 7251700 7.2517
-  HAdapt_refineElements_new_elm_aloc 9983400 9.9834
-  HAdapt_refineElements_new_elm_init 75806500 75.8065
-  HAdapt_refineElements_update_neighbours_ndx_on_ghosts 2177300 2.1773
+  HAdapt_refineElements_init 5336000 5.336
+  HAdapt_refineElements_find_corners_sides_bubbles 3497900 3.4979
+  HAdapt_refineElements_side0_find_nodes 6404000 6.404
+  HAdapt_refineElements_side0_add_new_nodes 2237200 2.2372
+  HAdapt_refineElements_side1_find_nodes 5678700 5.6787
+  HAdapt_refineElements_side1_add_new_nodes 9944000 9.944
+  HAdapt_refineElements_side2_find_nodes 5726300 5.7263
+  HAdapt_refineElements_side2_add_new_nodes 2428400 2.4284
+  HAdapt_refineElements_side3_find_nodes 6629800 6.6298
+  HAdapt_refineElements_side3_add_new_nodes 2217600 2.2176
+  HAdapt_refineElements_int_nodes_calc_keys 16255400 16.2554
+  HAdapt_refineElements_int_nodes_alloc 21096700 21.0967
+  HAdapt_refineElements_side0_init 3904000 3.904
+  HAdapt_refineElements_side1_init 3693300 3.6933
+  HAdapt_refineElements_side2_init 3746300 3.7463
+  HAdapt_refineElements_side3_init 4104400 4.1044
+  HAdapt_refineElements_int_nodes_init 5486400 5.4864
+  HAdapt_refineElements_new_elm_aloc 9261100 9.2611
+  HAdapt_refineElements_new_elm_init 40651200 40.6512
+  HAdapt_refineElements_update_neighbours_ndx_on_ghosts 2162400 2.1624
   HAdapt_refinedNeighboursUpdate_mpi_prep 0 0
-  HAdapt_refinedNeighboursUpdate_onproc_updates 13730500 13.7305
+  HAdapt_refinedNeighboursUpdate_onproc_updates 9031100 9.0311
   HAdapt_refinedNeighboursUpdate_mpi_update 0 0
-  HAdapt_refinedNeighboursUpdate_removeElements 4491500 4.4915
-  HAdapt_refinedNeighboursUpdate_update_neighbours_ndx_on_ghosts 2348400 2.3484
-  HAdaptUnrefine_unrefine_init 642900 0.6429
-  HAdaptUnrefine_unrefine_find 61703200 61.7032
-  HAdaptUnrefine_unrefine_updateBrothersIndexes 11193800 11.1938
-  HAdaptUnrefine_unrefine_unrefine_neigh_update 3530200 3.5302
-  HAdaptUnrefine_unrefine_unrefine_interp_neigh_update 348300 0.3483
-  HAdaptUnrefine_unrefine_delete_oldsons 24976400 24.9764
-  HAdaptUnrefine_unrefine_update_neighbours_ndx_on_ghosts 416600 0.4166
-  HAdaptUnrefine_unrefine_calc_wet_dry_orient 6317400 6.3174
-  flushTable_sort_prep 7474500 7.4745
-  flushTable_sort 11111200 11.1112
-  flushTable_sort2 3659600 3.6596
-  flushTable_sort_post 2427400 2.4274
-  flushTable_HashTable_reorder 109096600 109.097
-  flushTable_NodeHashTable_reorder 19157100 19.1571
-  flushTable_ElementsHashTable_reorder 52444000 52.444
-  flushTable_ElementsHashTable_reorder2 6742900 6.7429
-  flushTable_ElementsHashTable_updateLocalElements 1301600 1.3016
+  HAdapt_refinedNeighboursUpdate_removeElements 4277200 4.2772
+  HAdapt_refinedNeighboursUpdate_update_neighbours_ndx_on_ghosts 2223700 2.2237
+  HAdaptUnrefine_unrefine_init 687100 0.6871
+  HAdaptUnrefine_unrefine_find 33250600 33.2506
+  HAdaptUnrefine_unrefine_updateBrothersIndexes 12202000 12.202
+  HAdaptUnrefine_unrefine_unrefine_neigh_update 4180500 4.1805
+  HAdaptUnrefine_unrefine_unrefine_interp_neigh_update 353400 0.3534
+  HAdaptUnrefine_unrefine_delete_oldsons 10041200 10.0412
+  HAdaptUnrefine_unrefine_update_neighbours_ndx_on_ghosts 422900 0.4229
+  HAdaptUnrefine_unrefine_calc_wet_dry_orient 6953600 6.9536
+  flushTable_sort_prep 7004000 7.004
+  flushTable_sort 6750200 6.7502
+  flushTable_sort2 3525500 3.5255
+  flushTable_sort_post 2258100 2.2581
+  flushTable_HashTable_reorder 111009200 111.009
+  flushTable_NodeHashTable_reorder 18559800 18.5598
+  flushTable_ElementsHashTable_reorder 61001700 61.0017
+  flushTable_ElementsHashTable_reorder2 3880600 3.8806
+  flushTable_ElementsHashTable_updateLocalElements 1192800 1.1928
 Done
