@@ -31,9 +31,12 @@ class TitestSingleTest:
         #directory with reference results for comparison
         self.ref_dir="ref"
         #reference computer architechture to compare with
-        self.ref_arch="std"
-        if "fma" in get_cpu_instructions_sets():
-            self.ref_arch="fma"
+        if self.cfg.reference=="auto":
+            self.ref_arch="std"
+            if "fma" in get_cpu_instructions_sets():
+                self.ref_arch="fma"
+        else:
+            self.ref_arch = self.cfg.reference
             
         #
         self.should_have_same_elements=self.cfg.binary_identical

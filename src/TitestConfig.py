@@ -231,6 +231,8 @@ class TitestConfig:
         
         parser.add_argument('-tests', '--tests',required=False, default="short",
             help="which tests to perform. Default: short.")
+        parser.add_argument('-ref', '--reference', required=False, default="auto",
+                            help="which reference to use for comarison, options: auto, std, fma. Default: auto.")
         
         parser.add_argument('-v', '--verbose', action='store_true', help="turn on verbose logging")
         

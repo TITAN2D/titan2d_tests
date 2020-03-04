@@ -168,18 +168,23 @@ class Titest:
         
         log.info("Summary of results:")
         msg=""
+        passed_overall=True
         if self.cfg.run_src:
             #log.info("Building:\n"+pprint.pformat(self.build_results,width=160))
             msg+="Source obtaining\n\tPassed: "+str(self.src_results['passed'])+"\n"
+            passed_overall=passed_overall and self.src_results['passed']
+
         if self.cfg.run_build:
             #log.info("Building:\n"+pprint.pformat(self.build_results,width=160))
             msg+="Building\n\tPassed: "+str(self.build_results['passed'])+"\n"
+            passed_overall = passed_overall and self.build_results['passed']
+
         if self.cfg.run_tests:
-            
-            
             for k,v in self.tests_results.items():
                 msg+=k+"\n"
                 msg+="\tPassed: "+str(v['passed'])
+                if v['passed'] != None:
+                    passed_overall = passed_overall and v['passed']
                 if v['passed']==False or v['passed']==None:
                     msg+="\tmessage: "
                     lines=str(v['message']).splitlines(keepends=True)
@@ -192,9 +197,8 @@ class Titest:
                 msg+="\n"
         log.info("Tests Results:\n"+msg)
         os.chdir(old_wd)
+        return passed_overall
         
-        
-    
 
 if __name__ == '__main__':
-    Titest().run_from_cmdline()
+    exit(int(Titest().run_from_cmdline()))
