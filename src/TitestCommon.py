@@ -16,7 +16,7 @@ def run_command(cmd,print_output=True,timeout=None,redirect_output=None):
     output=""
     try:
         if redirect_output is not None:
-            cmd += " >& "+output
+            cmd += " >& "+redirect_output
 
         output=subprocess.check_output(cmd, shell=True,executable="/bin/bash", timeout=timeout)
         output=str(output)
