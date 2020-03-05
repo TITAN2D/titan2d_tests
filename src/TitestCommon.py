@@ -12,15 +12,21 @@ if titan2d_tests_src_directory not in sys.path:
 sys.path.insert(0,os.path.abspath(os.path.join(os.path.dirname(
     os.path.abspath(inspect.getfile(inspect.currentframe()))),"../src")) )
 
-def run_command(cmd,print_output=True,timeout=None):
+def run_command(cmd,print_output=True,timeout=None,redirect_output=None):
     output=""
     try:
+        if redirect_output is not None:
+            cmd += " >& "+output
+
         output=subprocess.check_output(cmd, shell=True,executable="/bin/bash", timeout=timeout)
         output=str(output)
     except Exception as e:
         print('Error: Command '+cmd+' exit with error:')
         if print_output:
             print(output)
+            if redirect_output is not None:
+                with open(redirect_output, "rt") as fin:
+                    print(fin.read())
         raise e
     else:
         if print_output:

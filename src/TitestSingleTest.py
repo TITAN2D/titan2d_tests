@@ -116,8 +116,8 @@ class TitestSingleTest:
         
     def execute_titan_command(self,execution_command,output,timeout):
         """execute titan command"""
-        run_cmd=titest_cmd_timing_format+' '+execution_command+" >& "+output
-        run_command(run_cmd,False,self.timeout)
+        run_cmd=titest_cmd_timing_format+' '+execution_command
+        run_command(run_cmd,False,self.timeout, redirect_output=output)
         
     def run_titan(self):
         """run titan"""
@@ -125,7 +125,7 @@ class TitestSingleTest:
         execution_command=self.get_titan_command()+" input.py"
         
         log.debug("Running command: "+execution_command)
-        
+
         self.execute_titan_command(execution_command,"run.out",self.timeout)
         
         
